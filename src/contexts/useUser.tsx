@@ -31,10 +31,10 @@ export function UserProvider({ children }: { children: ReactNode }) {
     const [user, setUser] = useState<User>({
         name: '',
         email: '',
-        birthday: { day: 1, month: 1, year: 2000 }
+        birthday: { day: 1, month: 1, year: 1999 }
     });
     const [isLoading, setIsLoading] = useState(false);
-    const [date, setDate] = useState<Date | undefined>(new Date());
+    const [date, setDate] = useState<Date | undefined>(new Date('1999-01-01'));
 
     const sumDays = useMemo(() => {
         if (!date) return 0;
