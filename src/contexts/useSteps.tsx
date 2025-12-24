@@ -1,5 +1,5 @@
 import { UserForm } from '@/components/userForm';
-import { createContext, useContext, type ReactNode, useState, useMemo, useCallback, useEffect } from 'react';
+import { createContext, useContext, type ReactNode, useState, useMemo } from 'react';
 import { useUser } from './useUser';
 
 export const STEPS = Object.freeze({
