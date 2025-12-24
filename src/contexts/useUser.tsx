@@ -1,4 +1,4 @@
-import { createContext, useContext, type ReactNode, useState, useMemo } from 'react';
+import { createContext, useContext, type ReactNode, useState, useMemo, useCallback, useEffect } from 'react';
 
 interface Birthday {
     day: number;
@@ -31,10 +31,10 @@ export function UserProvider({ children }: { children: ReactNode }) {
     const [user, setUser] = useState<User>({
         name: '',
         email: '',
-        birthday: { day: 1, month: 1, year: 1999 }
+        birthday: null
     });
     const [isLoading, setIsLoading] = useState(false);
-    const [date, setDate] = useState<Date | undefined>(new Date('1999-01-01'));
+    const [date, setDate] = useState<Date | undefined>();
 
     const sumDays = useMemo(() => {
         if (!date) return 0;
@@ -58,6 +58,19 @@ export function UserProvider({ children }: { children: ReactNode }) {
         const total = sumDays + sumMonths + sumYears;
         return total < 10 ? total : total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
     }, [sumDays, sumMonths, sumYears]);
+
+    const updateBirthday = useCallback(() => {
+        if (!date) return
+        setUser({ ...user, birthday: {
+            day: date?.getDate(),
+            month: date?.getMonth(),
+            year: date?.getFullYear(),
+        }})
+    }, [date])
+
+    useEffect(() => {
+        updateBirthday()
+    }, [date])
 
     return (
         <UserContext.Provider value={{ user, setUser, isLoading, date, setDate, sumDays, sumMonths, sumYears, mainNumber }}>

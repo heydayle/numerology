@@ -4,11 +4,14 @@ import { createRoot } from "react-dom/client"
 import "./index.css"
 import App from "./App.tsx"
 import { UserProvider } from "./contexts/useUser.tsx"
+import { StepsProvider } from "./contexts/useSteps.tsx"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <UserProvider>
-      <App />
+      <StepsProvider>
+        <App />
+      </StepsProvider>
     </UserProvider>
   </StrictMode>
 )

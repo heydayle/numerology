@@ -4,6 +4,8 @@ import { Calendar } from './ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from './ui/popover';
 import { Button } from './ui/button';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
+import { formatDate } from '@/utils/helper'
+import { Input } from './ui/input';
 
 export function UserForm() {
     const { user, setUser, date, setDate } = useUser();
@@ -14,9 +16,9 @@ export function UserForm() {
     }
 
     return (
-        <div className=''>
+        <div className='w-md mx-auto'>
             <div className='py-4'>
-                <input
+                <Input
                     type="text"
                     value={user?.name}
                     onChange={(e) => changeName(e.target.value)}
@@ -24,15 +26,14 @@ export function UserForm() {
                     className='p-2 my-4'
                 />
                 <br />
-                {date && (date.toDateString())}
                 <Popover open={open} onOpenChange={setOpen}>
                     <PopoverTrigger asChild>
                     <Button
                         variant="outline"
                         id="date"
-                        className="w-48 justify-between font-normal"
+                        className="w-full justify-between font-normal"
                     >
-                        {date ? date.toLocaleDateString() : "Select date"}
+                        {date ? formatDate(date) : "Select date"}
                         <ChevronDownIcon />
                     </Button>
                     </PopoverTrigger>
