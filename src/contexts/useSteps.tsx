@@ -1,6 +1,7 @@
 import { UserForm } from '@/components/userForm';
 import { createContext, useContext, type ReactNode, useState, useMemo } from 'react';
 import { useUser } from './useUser';
+import { Loading } from '@/components/loading';
 
 export const STEPS = Object.freeze({
     InputForm: 'InputForm',
@@ -10,6 +11,7 @@ export const STEPS = Object.freeze({
 export type Step = keyof typeof STEPS
 
 interface CurrentStep {
+    isLoading?: boolean
     canNextStep: boolean
     titleNext?: string
     onNextStep?: () => void
@@ -33,10 +35,11 @@ export function StepsProvider({ children }: { children: ReactNode }) {
         switch(step) {
             case STEPS.Analysing:
                 return {
+                    isLoading: true,
                     canNextStep: !isLoading,
                     titleNext: 'View Result',
                     onNextStep: () => setStep(STEPS.Result),
-                    component: 'Analysis Loading!'
+                    component: <Loading />,
                 }
             case STEPS.Result:
                 return {
