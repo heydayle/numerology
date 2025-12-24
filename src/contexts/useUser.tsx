@@ -16,6 +16,7 @@ interface UserContextType {
     user: User;
     setUser: (user: User) => void;
     isLoading: boolean;
+    setIsLoading?: (isLoading: boolean) => void;
     date: Date | undefined;
     setDate: (date: Date | undefined) => void;
 
@@ -73,7 +74,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
     }, [date])
 
     return (
-        <UserContext.Provider value={{ user, setUser, isLoading, date, setDate, sumDays, sumMonths, sumYears, mainNumber }}>
+        <UserContext.Provider value={{ user, setUser, isLoading, setIsLoading, date, setDate, sumDays, sumMonths, sumYears, mainNumber }}>
             {children}
         </UserContext.Provider>
     );
