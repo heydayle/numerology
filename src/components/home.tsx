@@ -8,7 +8,7 @@ export function Home() {
         <div className='p-6'>
             <h1 className='text-lg'>Numberology</h1>
             {currentStep.component}
-            {step === STEPS.InputForm && <div className='w-md mx-auto text-right'>
+            {step === STEPS.InputForm && <div className='w-[500px] mx-auto text-center'>
                 <Button
                     disabled={!currentStep.canNextStep}
                     onClick={currentStep.onNextStep}
