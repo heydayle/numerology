@@ -20,7 +20,7 @@ export function DetailsNumber() {
                     return info?.description ? (
                         <div key={type} className="px-4 py-6 bg-neutral-900 rounded-lg shadow-md">
                             <h3 className={`text-xl font-semibold mb-2 ${info.style}`}>{ t(info.title) }</h3>
-                            <p className="text-neutral-300">{info.description}</p>
+                            <p className="text-neutral-300 whitespace-pre-line">{info.description}</p>
                         </div>
                     ) : null;
                 })}
