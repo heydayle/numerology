@@ -33,7 +33,6 @@ const KeyNumberContext = createContext<KeyNumberContextType | undefined>(undefin
 
 export function KeyNumberProvider({ children, keyNumber }: { children: React.ReactNode; keyNumber: number }) {
     const locales = 'vi';
-    const { mainNumber } = useUser();
 
     const keyNumberInfor = getKeyNumberInfo(locales, keyNumber);
     const data = {
