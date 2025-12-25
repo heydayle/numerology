@@ -11,9 +11,9 @@ export function InformationOfNumber() {
             keyNumber={mainNumber}
             birthdayNumber={birthdayNumber}
             lifeAdtitudeNumber={lifeAdtitudeNumber}
-        >
+        >   
             <DetailsNumber />
-            <hr />
+            <hr className="my-4"/>
             <BirthdayNumber />
         </KeyNumberProvider>
     )

@@ -59,7 +59,9 @@ export function UserProvider({ children }: { children: ReactNode }) {
 
     const mainNumber = useMemo(() => {
         const total = sumDays + sumMonths + sumYears;
-        return total < 10 ? total : total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+        if (total === 22) return total;
+        if (total > 11) return total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+        return total;
     }, [sumDays, sumMonths, sumYears]);
 
     const birthdayNumber = useMemo(() => {

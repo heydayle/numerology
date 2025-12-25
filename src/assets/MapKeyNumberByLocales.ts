@@ -9,8 +9,8 @@ type GeneralItemType = {
 }
 
 export const typeLifePathNumbersStrings = [
-    "destiny",
     "overview",
+    "destiny",
     "purposeOfLife",
     "optimalDevelopmentConditions",
     "outstandingCharacteristics",
