@@ -2,6 +2,7 @@ import { UserForm } from '@/components/userForm';
 import { createContext, useContext, type ReactNode, useState, useMemo } from 'react';
 import { useUser } from './useUser';
 import { Loading } from '@/components/loading';
+import { InformationOfNumber } from '@/components/InformationOfNumber';
 
 export const STEPS = Object.freeze({
     InputForm: 'InputForm',
@@ -45,11 +46,11 @@ export function StepsProvider({ children }: { children: ReactNode }) {
                 return {
                     canNextStep: true,
                     onNextStep: () => setStep(STEPS.InputForm),
-                    component: (<>Number: { mainNumber }</>)
+                    component: <InformationOfNumber />,
                 }
             default:
                 return {
-                    canNextStep: Boolean(mainNumber && user.name),
+                    canNextStep: Boolean(mainNumber),
                     titleNext: 'Analysis',
                     onNextStep: () => setStep(STEPS.Analysing),
                     component: <UserForm />,
