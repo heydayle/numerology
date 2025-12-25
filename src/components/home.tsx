@@ -5,7 +5,7 @@ export function Home() {
     const { step, currentStep } = useSteps();
 
     return (
-        <div className='p-6'>
+        <div className='p-6 max-w-4xl mx-auto'>
             <h1 className='text-lg'>Numberology</h1>
             {currentStep.component}
             {step === STEPS.InputForm && <div className='w-[500px] mx-auto text-center'>

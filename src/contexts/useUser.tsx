@@ -24,6 +24,8 @@ interface UserContextType {
     sumMonths: number;
     sumYears: number;
     mainNumber: number;
+    birthdayNumber: number;
+    lifeAdtitudeNumber: number;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -60,6 +62,16 @@ export function UserProvider({ children }: { children: ReactNode }) {
         return total < 10 ? total : total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
     }, [sumDays, sumMonths, sumYears]);
 
+    const birthdayNumber = useMemo(() => {
+        const total = sumDays;
+        return total < 10 ? total : total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+    }, [sumDays]);
+
+    const lifeAdtitudeNumber = useMemo(() => {
+        const total = sumDays + sumMonths;
+        return total < 10 ? total : total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+    }, [sumDays, sumMonths]);
+
     const updateBirthday = useCallback(() => {
         if (!date) return
         setUser({ ...user, birthday: {
@@ -74,7 +86,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
     }, [date])
 
     return (
-        <UserContext.Provider value={{ user, setUser, isLoading, setIsLoading, date, setDate, sumDays, sumMonths, sumYears, mainNumber }}>
+        <UserContext.Provider value={{ user, setUser, isLoading, setIsLoading, date, setDate, sumDays, sumMonths, sumYears, mainNumber, birthdayNumber, lifeAdtitudeNumber }}>
             {children}
         </UserContext.Provider>
     );
