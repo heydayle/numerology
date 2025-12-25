@@ -1,18 +1,15 @@
 import { UserForm } from '@/components/userForm';
 import { createContext, useContext, type ReactNode, useState, useMemo } from 'react';
 import { useUser } from './useUser';
-import { Loading } from '@/components/loading';
 import { InformationOfNumber } from '@/components/InformationOfNumber';
 
 export const STEPS = Object.freeze({
     InputForm: 'InputForm',
-    Analysing: 'Analysing',
     Result: 'Result',
 } as const)
 export type Step = keyof typeof STEPS
 
 interface CurrentStep {
-    isLoading?: boolean
     canNextStep: boolean
     titleNext?: string
     onNextStep?: () => void
@@ -27,21 +24,12 @@ interface StepsContextType {
 
 const StepsContext = createContext<StepsContextType | undefined>(undefined);
 
-
 export function StepsProvider({ children }: { children: ReactNode }) {
     const [step, setStep] = useState<Step>(STEPS.InputForm)
-    const { user, mainNumber, isLoading } = useUser()
+    const { mainNumber } = useUser()
 
     const currentStep = useMemo<CurrentStep>(() => {
         switch(step) {
-            case STEPS.Analysing:
-                return {
-                    isLoading: true,
-                    canNextStep: !isLoading,
-                    titleNext: 'View Result',
-                    onNextStep: () => setStep(STEPS.Result),
-                    component: <Loading />,
-                }
             case STEPS.Result:
                 return {
                     canNextStep: true,
@@ -52,11 +40,11 @@ export function StepsProvider({ children }: { children: ReactNode }) {
                 return {
                     canNextStep: Boolean(mainNumber),
                     titleNext: 'Analysis',
-                    onNextStep: () => setStep(STEPS.Analysing),
+                    onNextStep: () => setStep(STEPS.Result),
                     component: <UserForm />,
                 }
         }
-    }, [step, setStep, user, mainNumber])
+    }, [step, mainNumber])
 
     return (
         <StepsContext.Provider value={{ step, setStep, currentStep }}>
@@ -65,6 +53,7 @@ export function StepsProvider({ children }: { children: ReactNode }) {
     );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useSteps() {
     const context = useContext(StepsContext);
     if (context === undefined) {

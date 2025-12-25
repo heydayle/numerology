@@ -1,4 +1,4 @@
-import { createContext, useContext, type ReactNode, useState, useMemo, useCallback, useEffect } from 'react';
+import { createContext, useContext, type ReactNode, useState, useMemo, useCallback } from 'react';
 
 interface Birthday {
     day: number;
@@ -16,7 +16,7 @@ interface UserContextType {
     user: User;
     setUser: (user: User) => void;
     isLoading: boolean;
-    setIsLoading?: (isLoading: boolean) => void;
+    setIsLoading: (isLoading: boolean) => void;
     date: Date | undefined;
     setDate: (date: Date | undefined) => void;
 
@@ -74,18 +74,15 @@ export function UserProvider({ children }: { children: ReactNode }) {
         return total < 10 ? total : total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
     }, [sumDays, sumMonths]);
 
-    const updateBirthday = useCallback(() => {
+    useCallback(() => {
         if (!date) return
+
         setUser({ ...user, birthday: {
             day: date?.getDate(),
             month: date?.getMonth(),
             year: date?.getFullYear(),
         }})
-    }, [date])
-
-    useEffect(() => {
-        updateBirthday()
-    }, [date])
+    }, [date]);
 
     return (
         <UserContext.Provider value={{ user, setUser, isLoading, setIsLoading, date, setDate, sumDays, sumMonths, sumYears, mainNumber, birthdayNumber, lifeAdtitudeNumber }}>
@@ -94,6 +91,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
     );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useUser() {
     const context = useContext(UserContext);
     if (context === undefined) {

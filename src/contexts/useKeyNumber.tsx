@@ -14,7 +14,7 @@ type GeneralItemType = {
 // Outstanding characteristics, Development recommendations, Suitable careers,
 // Negative tendencies to overcome, Summary
 
-type GeneralType = {
+export type GeneralType = {
     destiny: GeneralItemType | null;
     overview: GeneralItemType | null;
     purposeOfLife: GeneralItemType | null;
@@ -60,6 +60,7 @@ export function KeyNumberProvider({ children, keyNumber, birthdayNumber, lifeAdt
     );
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useKeyNumber() {
     const context = useContext(KeyNumberContext);
     if (!context) {

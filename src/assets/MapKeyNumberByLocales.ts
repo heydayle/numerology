@@ -1,7 +1,7 @@
 
 import { lifePathNumbers } from "./MapDataLocales/lifePathNumbers";
 
-type GeneralItemType = {
+export type GeneralItemType = {
     index: number;
     description: string | null;
     title: string;
