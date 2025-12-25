@@ -28,7 +28,7 @@ export function UserForm() {
                         {date ? formatDate(date) : "Please select your date of birth!"}
                     </Label>
                     <Calendar
-                        className='bg-transparent'
+                        className='mx-auto bg-transparent'
                         mode="single"
                         selected={date}
                         numberOfMonths={2}

@@ -1,11 +1,6 @@
 
-import { KeyNumbersMap } from "./MapDataLocales/keyNumbers";
-type GetInforByLocalesType  = {
-    index: number;
-    data: Map<number, string>;
-    title: string;
-    style: string;
-}
+import { lifePathNumbers } from "./MapDataLocales/lifePathNumbers";
+
 type GeneralItemType = {
     index: number;
     description: string | null;
@@ -13,9 +8,9 @@ type GeneralItemType = {
     style: string;
 }
 
-export const typeKeyNumbersStrings = [
-    "destiny",
+export const typeLifePathNumbersStrings = [
     "overview",
+    "destiny",
     "purposeOfLife",
     "optimalDevelopmentConditions",
     "outstandingCharacteristics",
@@ -25,18 +20,18 @@ export const typeKeyNumbersStrings = [
     "summary",
 ];
 
-const getInforByLocales = (locale: string): Map<string, GetInforByLocalesType> | null => {
-    const localeData = KeyNumbersMap.get(locale);
+const getLifePathByLocales = (locale: string, keyNumber: number): Map<string, GeneralItemType> | null => {
+    const localeData = lifePathNumbers.get(locale);
     if (!localeData) {
         return null;
     }
-    const map_KeyNumber_Info = new Map<string, { data: Map<number, string>, title: string, index: number, style: string }>();
+    const map_KeyNumber_Info = new Map<string, GeneralItemType>();
 
-    typeKeyNumbersStrings.map((type, index) => {
-        const dataMap = localeData[`${locale}_${type}_map`];
+    typeLifePathNumbersStrings.map((type, index) => {
+        const dataMap = localeData[`${type}_map`];
         const item = {
             title: `${type}_title`,
-            data: dataMap,
+            description: dataMap.get(keyNumber),
             style: "text-blue-500",
             index: index + 1
         };
@@ -47,36 +42,23 @@ const getInforByLocales = (locale: string): Map<string, GetInforByLocalesType> |
     return map_KeyNumber_Info
 }
 
-const getInforByType = (type: string, locale: string, keyNumber: number): GeneralItemType | null => {
-    const keyNumberInfor = getInforByLocales(locale);
-    if (!keyNumberInfor) {
-        return null;
-    }
-    return {
-        title: keyNumberInfor.get(type)?.title || '',
-        style: keyNumberInfor.get(type)?.style || '',
-        index: keyNumberInfor.get(type)?.index || 0,
-        description: keyNumberInfor.get(type)?.data.get(keyNumber) || null,
-    }
-}
+export function getLifePathNumber(locale: string, keyNumber: number) {
+    const lifePaths = getLifePathByLocales(locale, keyNumber);
 
-export function getKeyNumberInfo(locale: string, keyNumber: number) {
-    const keyNumberInfor = getInforByLocales(locale);
-
-    if (!keyNumberInfor) {
+    if (!lifePaths) {
         return null;
     }
 
     const general = {
-        destiny: getInforByType('destiny', locale, keyNumber) || null,
-        overview: getInforByType('overview', locale, keyNumber) || null,
-        purposeOfLife: getInforByType('purposeOfLife', locale, keyNumber) || null,
-        optimalDevelopmentConditions: getInforByType('optimalDevelopmentConditions', locale, keyNumber) || null,
-        outstandingCharacteristics: getInforByType('outstandingCharacteristics', locale, keyNumber) || null,
-        developmentRecommendations: getInforByType('developmentRecommendations', locale, keyNumber) || null,
-        suitableCareers: getInforByType('suitableCareers', locale, keyNumber) || null,
-        negativeTendenciesToOvercome: getInforByType('negativeTendenciesToOvercome', locale, keyNumber) || null,
-        summary: getInforByType('summary', locale, keyNumber) || null,
+        destiny: lifePaths.get('destiny') || null,
+        overview: lifePaths.get('overview') || null,
+        purposeOfLife: lifePaths.get('purposeOfLife') || null,
+        optimalDevelopmentConditions: lifePaths.get('optimalDevelopmentConditions') || null,
+        outstandingCharacteristics: lifePaths.get('outstandingCharacteristics') || null,
+        developmentRecommendations: lifePaths.get('developmentRecommendations') || null,
+        suitableCareers: lifePaths.get('suitableCareers') || null,
+        negativeTendenciesToOvercome: lifePaths.get('negativeTendenciesToOvercome') || null,
+        summary: lifePaths.get('summary') || null,
     }
 
     return {

@@ -1,5 +1,7 @@
 import { useContext, createContext } from "react";
-import { getKeyNumberInfo } from "@/assets/MapKeyNumberByLocales";
+import { getLifePathNumber } from "@/assets/MapKeyNumberByLocales";
+import { getBirthdayMeaning } from "@/assets/MapNumberOfBirthdayByLocales";
+import { getAdditudeMeaning } from "@/assets/MapAdditudeByLocales";
 
 type GeneralItemType = {
     index: number;
@@ -25,17 +27,31 @@ type GeneralType = {
 }
 
 type KeyNumberContextType = {
-    general: GeneralType | null;
+    general: GeneralType | null
+    birthday: string | null
+    additude: string | null
+}
+
+type KeyNumberProviderProps = {
+    children: React.ReactNode;
+    keyNumber: number;
+    birthdayNumber: number;
+    lifeAdtitudeNumber: number;
 }
 
 const KeyNumberContext = createContext<KeyNumberContextType | undefined>(undefined);
 
-export function KeyNumberProvider({ children, keyNumber }: { children: React.ReactNode; keyNumber: number }) {
+export function KeyNumberProvider({ children, keyNumber, birthdayNumber, lifeAdtitudeNumber }: KeyNumberProviderProps) {
     const locales = 'vi';
 
-    const keyNumberInfor = getKeyNumberInfo(locales, keyNumber);
+    const lifePathNumberInfor = getLifePathNumber(locales, keyNumber);
+    const birthdayNumberInfor = getBirthdayMeaning(locales, birthdayNumber);
+    const additudeNumberInfor = getAdditudeMeaning(locales, lifeAdtitudeNumber);
+
     const data = {
-        general: keyNumberInfor?.general || null
+        general: lifePathNumberInfor?.general || null,
+        birthday: birthdayNumberInfor || null,
+        additude: additudeNumberInfor || null,
     }
     return (
         <KeyNumberContext.Provider value={data}>
