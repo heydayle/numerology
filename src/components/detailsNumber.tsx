@@ -1,8 +1,10 @@
 import { useKeyNumber } from "@/contexts/useKeyNumber";
 import { typeLifePathNumbersStrings } from "@/assets/MapKeyNumberByLocales";
 import { useUser } from "@/contexts/useUser";
+import { useTranslation } from "react-i18next";
 
 export function DetailsNumber() {
+    const { t } = useTranslation();
     const { general } = useKeyNumber();
     const { mainNumber } = useUser();
     return (
@@ -17,7 +19,7 @@ export function DetailsNumber() {
                     const info = (general as any)[type];
                     return info?.description ? (
                         <div key={type} className="px-4 py-6 bg-neutral-900 rounded-lg shadow-md">
-                            <h3 className={`text-xl font-semibold mb-2 ${info.style}`}>{info.title}</h3>
+                            <h3 className={`text-xl font-semibold mb-2 ${info.style}`}>{ t(info.title) }</h3>
                             <p className="text-neutral-300">{info.description}</p>
                         </div>
                     ) : null;
