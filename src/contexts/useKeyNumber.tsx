@@ -1,6 +1,5 @@
 import { useContext, createContext } from "react";
 import { getKeyNumberInfo } from "@/assets/MapKeyNumberByLocales";
-import { useUser } from "./useUser";
 
 type GeneralItemType = {
     index: number;
