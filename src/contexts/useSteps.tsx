@@ -1,7 +1,9 @@
-import { UserForm } from '@/components/userForm';
+import { UserForm } from '@/components/details/userForm';
 import { createContext, useContext, type ReactNode, useState, useMemo } from 'react';
 import { useUser } from './useUser';
-import { InformationOfNumber } from '@/components/InformationOfNumber';
+import { InformationOfNumber } from '@/components/details/InformationOfNumber';
+import { useTranslation } from 'react-i18next';
+import { useSearchParams } from 'react-router';
 
 export const STEPS = Object.freeze({
     InputForm: 'InputForm',
@@ -25,8 +27,21 @@ interface StepsContextType {
 const StepsContext = createContext<StepsContextType | undefined>(undefined);
 
 export function StepsProvider({ children }: { children: ReactNode }) {
+    const { t } = useTranslation();
+    const [searchParams, setSearchParams] = useSearchParams();
     const [step, setStep] = useState<Step>(STEPS.InputForm)
-    const { mainNumber } = useUser()
+    const { mainNumber, user } = useUser()
+
+    const nextToResult = () => {
+        setStep(STEPS.Result)
+        console.log('name', user);
+        
+        setSearchParams({
+            ...Object.fromEntries(searchParams),
+            name: user.name,
+            birthday: user.birthday ? `${user.birthday.year}-${user.birthday.month + 1}-${user.birthday.day}` : '',
+        });
+    }
 
     const currentStep = useMemo<CurrentStep>(() => {
         switch(step) {
@@ -39,8 +54,8 @@ export function StepsProvider({ children }: { children: ReactNode }) {
             default:
                 return {
                     canNextStep: Boolean(mainNumber),
-                    titleNext: 'Analysis',
-                    onNextStep: () => setStep(STEPS.Result),
+                    titleNext: t("analysis"),
+                    onNextStep: () => nextToResult(),
                     component: <UserForm />,
                 }
         }

@@ -5,19 +5,22 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover"
-import { UserForm } from './userForm';
+import { UserForm } from './details/userForm';
+import { useTranslation } from 'react-i18next';
 
 export function Home() {
+    const { t } = useTranslation();
     const { step, currentStep } = useSteps();
 
     return (
         <div className='p-6 max-w-5xl mx-auto relative'>
-            <h1 className='text-lg'>Numberology</h1>
+            <h1 className='text-center text-2xl font-bold'>{t("numberology")}</h1>
             {currentStep.component}
             {step === STEPS.InputForm && <div className='w-[500px] mx-auto text-center'>
                 <Button
                     disabled={!currentStep.canNextStep}
                     onClick={currentStep.onNextStep}
+                    className="cursor-pointer"
                 >
                     {currentStep.titleNext}
                 </Button>

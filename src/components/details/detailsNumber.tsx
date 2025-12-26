@@ -3,28 +3,42 @@ import { typeLifePathNumbersStrings, type GeneralItemType } from "@/assets/MapKe
 import { useUser } from "@/contexts/useUser";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import CountUp from "./bits/CountUp";
-import { BlockDetail } from "./blockDetail";
+import CountUp from "../bits/CountUp";
+import { BlockDetail } from "../blockDetail";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { Button } from "../ui/button";
 
 export function DetailsNumber() {
     const { t } = useTranslation();
     const { general } = useKeyNumber();
     const { mainNumber, isLoading, setIsLoading } = useUser();
 
+    let timeoutId: ReturnType<typeof setTimeout>;
     const createTimeout = () => {
-        setTimeout(() => setIsLoading(false), 1000); 
+        timeoutId = setTimeout(() => setIsLoading(false), 1000); 
     };
 
     useEffect(() => {
-        clearTimeout(createTimeout as unknown as number);
+        clearTimeout(timeoutId);
         setIsLoading(true);
         createTimeout();
-    }, [mainNumber, isLoading, setIsLoading]);
+    }, [mainNumber]);
 
     return (
         <>
             <div className="mt-4 text-center my-4">
-                <h2 className="text-2xl font-bold uppercase">Life path number</h2>
+                <div className="flex gap-2 justify-center items-center">
+                    <h2 className="text-2xl font-bold uppercase">{t("life path number")}</h2>
+                    <Tooltip>
+                        <TooltipTrigger asChild>
+                            <Button variant="outline" size="icon" className="rounded-full">?</Button>
+                        </TooltipTrigger>
+                        <TooltipContent color="neutral" className="w-120 p-4 text-md text-primary bg-neutral-800 border border-neutral-700">
+                            {t("life path number subtitle")}
+                        </TooltipContent>
+                    </Tooltip>
+                </div>
+                
                 <div className="mt-2 text-8xl font-extrabold text-yellow-600">
                     <CountUp from={100} to={mainNumber} direction="up"/>
                 </div>

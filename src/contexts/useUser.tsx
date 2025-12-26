@@ -1,4 +1,5 @@
-import { createContext, useContext, type ReactNode, useState, useMemo, useCallback } from 'react';
+import { createContext, useContext, type ReactNode, useState, useMemo, useCallback, useEffect } from 'react';
+import { useSearchParams } from 'react-router';
 
 interface Birthday {
     day: number;
@@ -19,6 +20,8 @@ interface UserContextType {
     setIsLoading: (isLoading: boolean) => void;
     date: Date | undefined;
     setDate: (date: Date | undefined) => void;
+    onChangeName: (name: string) => void;
+    onSetBirthday: (date: Date | undefined) => void;
 
     sumDays: number;
     sumMonths: number;
@@ -31,6 +34,7 @@ interface UserContextType {
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
 export function UserProvider({ children }: { children: ReactNode }) {
+    const [searchParams] = useSearchParams();
     const [user, setUser] = useState<User>({
         name: '',
         email: '',
@@ -38,6 +42,31 @@ export function UserProvider({ children }: { children: ReactNode }) {
     });
     const [isLoading, setIsLoading] = useState(false);
     const [date, setDate] = useState<Date | undefined>(new Date('1999-01-01'));
+
+    const init = useCallback(() => {
+        const name = searchParams.get('name');
+        const birthday = searchParams.get('birthday');
+        const userTemp = { ...user };
+        
+        if (name) {
+            userTemp.name = name;
+        }
+        if (birthday) {
+            const dateParam = new Date(birthday);
+            setDate(dateParam);
+            userTemp.birthday = {
+                day: dateParam.getDate(),
+                month: dateParam.getMonth(),
+                year: dateParam.getFullYear(),
+            };
+        }
+
+        setUser(userTemp);
+    }, [searchParams]);
+
+    useEffect(() => {
+        init();
+    }, [])
 
     const sumDays = useMemo(() => {
         if (!date) return 0;
@@ -74,18 +103,27 @@ export function UserProvider({ children }: { children: ReactNode }) {
         return total < 10 ? total : total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
     }, [sumDays, sumMonths]);
 
-    useCallback(() => {
-        if (!date) return
+    const onChangeName = (name: string) => {
+        setUser((prev) => ({
+            ...prev,
+            name: name,
+        }));
+    }
 
-        setUser({ ...user, birthday: {
-            day: date?.getDate(),
-            month: date?.getMonth(),
-            year: date?.getFullYear(),
-        }})
+    const onSetBirthday = useCallback((date: Date | undefined) => {
+        if (!date) return
+        setUser((prevState) => ({
+            ...prevState,
+            birthday: {
+                day: date.getDate(),
+                month: date.getMonth(),
+                year: date.getFullYear(),
+            }
+        }));
     }, [date]);
 
     return (
-        <UserContext.Provider value={{ user, setUser, isLoading, setIsLoading, date, setDate, sumDays, sumMonths, sumYears, mainNumber, birthdayNumber, lifeAdtitudeNumber }}>
+        <UserContext.Provider value={{ user, setUser, isLoading, setIsLoading, date, setDate, onChangeName, onSetBirthday, sumDays, sumMonths, sumYears, mainNumber, birthdayNumber, lifeAdtitudeNumber }}>
             {children}
         </UserContext.Provider>
     );

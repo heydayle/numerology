@@ -1,4 +1,14 @@
 {
+    "numberology": "Numerology",
+
+    "enter your name": "Enter your name",
+    "please select your birthday": "Please select your birthday",
+    "analysis": "Analysis",
+
+    "life path number": "Life Path Number",
+    "birthday number": "Birthday Number",
+    "life additude": "Life Attitude",
+
     "destiny_title": "Destiny",
     "overview_title": "Overview",
     "purposeOfLife_title": "Purpose of Life",
