@@ -12,7 +12,6 @@ export function BirthdayChartAnalysis(props: BirthdayChartAnalysisProps) {
     const { t } = useTranslation();
 
     const convertEmptyToNumber = useMemo(() => {
-        console.log(props.chartValue);
         const temp = {
             ...props.chartValue
         } as Record<string, string>
@@ -24,10 +23,7 @@ export function BirthdayChartAnalysis(props: BirthdayChartAnalysisProps) {
     }, [props])
 
     const meaningByChart = useMemo(() => {
-        const data = getBirthdayChartMeaning(LOCALES, convertEmptyToNumber)
-        console.log(data);
-        
-        return data
+        return getBirthdayChartMeaning(LOCALES, convertEmptyToNumber)
     }, [convertEmptyToNumber])
 
     const renderMeanings = useMemo(() => {
@@ -51,11 +47,11 @@ export function BirthdayChartAnalysis(props: BirthdayChartAnalysisProps) {
                     <h2 className="my-4 text-center text-xl font-bold uppercase">
                         {t('This is an explanation for your birth chart')}
                     </h2>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                         {renderMeanings.map((mean, index) => {
                             return (
                                 <BlockDetail
-                                    className={index === 8 ? 'col-span-2' : ''}
+                                    className={index === 8 ? 'lg:col-span-2' : ''}
                                     type={mean.key}
                                     style="text-blue-500"
                                     title={mean.title}
