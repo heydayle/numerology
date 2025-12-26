@@ -1,17 +1,20 @@
 import { Skeleton } from "./ui/skeleton";
 import TextType from "./bits/TextType";
+import { cn } from "@/lib/utils";
 
 type BlockDetailProps = {
     type: string;
     style?: string;
     title?: string;
     description: string;
-    isLoading: boolean;
+    isLoading?: boolean;
+    className?: string
 }
 
-export function BlockDetail({ type, style, title, description, isLoading }: BlockDetailProps) {
+export function BlockDetail({ type, style, title, description, isLoading, className }: BlockDetailProps) {
+    const classNameBind = cn('px-4 py-6 bg-neutral-900/20 border border-neutral-900 filter backdrop-blur-sm rounded-lg shadow-md', [className])
     return (
-        <div key={type} className="px-4 py-6 bg-neutral-900/20 border border-neutral-900 filter backdrop-blur-sm rounded-lg shadow-md">
+        <div key={type} className={classNameBind}>
             {title && <h3 className={`text-xl font-semibold mb-4 ${style}`}>{ title }</h3>}
             <div className="text-neutral-300">
                 {isLoading 

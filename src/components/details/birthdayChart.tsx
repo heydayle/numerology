@@ -1,7 +1,8 @@
 import { useUser } from "@/contexts/useUser"
 import { useTranslation } from "react-i18next"
+import { BirthdayChartAnalysis } from "./birthdayChartAnalysis"
 
-type NumerologyChart = Record<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9, string>
+export type NumerologyChart = Record<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9, string>
 
 function pad2(n: number) {
   return String(n).padStart(2, "0")
@@ -67,13 +68,13 @@ export function BirthdayChart() {
 
     const date = new Date(user.birthday.year, user.birthday.month, user.birthday.day);
 
-    // const chart = buildNumerologyChart(date) // {1:"111",2:"",...,9:"999"}
+    const chart = buildNumerologyChart(date) // {1:"111",2:"",...,9:"999"}
     const loShuGrid = buildLoShuGrid(date)
     const itemClass = "w-28 h-28 border p-4 flex items-center justify-center bg-neutral-800/20 filter backdrop-blur-sm"
 
     const renderItem = (value: string) => {
         return (
-            <div key={value} className={itemClass}>
+            <div className={itemClass}>
                 <div className="text-4xl">{value || ""}</div>
             </div>
         )
@@ -99,6 +100,9 @@ export function BirthdayChart() {
                     {renderItem(loShuGrid[2][2])}
                 </div>
             </div>}
+            <div>
+                <BirthdayChartAnalysis chartValue={chart} />
+            </div>
         </div>
     )
 }

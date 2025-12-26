@@ -44,7 +44,7 @@ export function DetailsNumber() {
                 </div>
                 <div className="mt-4 border-b border-dashed border-yellow-400 w-24 mx-auto"></div>
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 {typeLifePathNumbersStrings.map((type) => {
                     const info = (general as any)[type] as GeneralItemType;
                     return info?.description ? (

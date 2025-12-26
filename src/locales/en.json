@@ -18,5 +18,9 @@
     "developmentRecommendations_title": "Development Recommendations",
     "suitableCareers_title": "Suitable Careers",
     "negativeTendenciesToOvercome_title": "Negative Tendencies to Overcome",
-    "summary_title": "Summary"
+    "summary_title": "Summary",
+
+    "not have number in birthday chart": "You don't have {number} on your birthday chart",
+    "have number in birthday chart": "You have {count} number {number} in your birthday chart",
+    "This is an explanation for your birth chart.": "This is an explanation for your birth chart"
 }
