@@ -32,7 +32,7 @@ const getLifePathByLocales = (locale: string, keyNumber: number): Map<string, Ge
         const item = {
             title: `${type}_title`,
             description: dataMap.get(keyNumber),
-            style: "text-blue-500",
+            style: "text-blue-200",
             index: index + 1
         };
 
