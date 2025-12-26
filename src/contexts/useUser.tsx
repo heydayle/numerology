@@ -6,7 +6,7 @@ interface Birthday {
     month: number;
     year: number;
 }
-interface User {
+export interface User {
     id?: string;
     name: string;
     email: string;
@@ -47,7 +47,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
         const name = searchParams.get('name');
         const birthday = searchParams.get('birthday');
         const userTemp = { ...user };
-        
+
         if (name) {
             userTemp.name = name;
         }

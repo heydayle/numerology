@@ -1,6 +1,6 @@
 import { UserForm } from '@/components/details/userForm';
 import { createContext, useContext, type ReactNode, useState, useMemo } from 'react';
-import { useUser } from './useUser';
+import { useUser, type User } from './useUser';
 import { InformationOfNumber } from '@/components/details/InformationOfNumber';
 import { useTranslation } from 'react-i18next';
 import { useSearchParams } from 'react-router';
@@ -14,7 +14,7 @@ export type Step = keyof typeof STEPS
 interface CurrentStep {
     canNextStep: boolean
     titleNext?: string
-    onNextStep?: () => void
+    onNextStep?: (user?: User) => void
     component: ReactNode
 }
 
@@ -28,19 +28,20 @@ const StepsContext = createContext<StepsContextType | undefined>(undefined);
 
 export function StepsProvider({ children }: { children: ReactNode }) {
     const { t } = useTranslation();
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [_, setSearchParams] = useSearchParams();
     const [step, setStep] = useState<Step>(STEPS.InputForm)
-    const { mainNumber, user } = useUser()
+    const { mainNumber } = useUser();
 
-    const nextToResult = () => {
+    const nextToResult = (userFormData?: User) => {
         setStep(STEPS.Result)
-        console.log('name', user);
+        if (!userFormData) return;
         
-        setSearchParams({
-            ...Object.fromEntries(searchParams),
-            name: user.name,
-            birthday: user.birthday ? `${user.birthday.year}-${user.birthday.month + 1}-${user.birthday.day}` : '',
-        });
+        const params = {
+            name: userFormData.name,
+            birthday: userFormData.birthday ? `${userFormData.birthday.year}-${userFormData.birthday.month + 1}-${userFormData.birthday.day}` : '',
+        }
+
+        setSearchParams((prev) => ({ ...prev, ...params }));
     }
 
     const currentStep = useMemo<CurrentStep>(() => {
@@ -55,7 +56,7 @@ export function StepsProvider({ children }: { children: ReactNode }) {
                 return {
                     canNextStep: Boolean(mainNumber),
                     titleNext: t("analysis"),
-                    onNextStep: () => nextToResult(),
+                    onNextStep: (user?: User) => nextToResult(user),
                     component: <UserForm />,
                 }
         }

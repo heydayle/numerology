@@ -7,10 +7,12 @@ import {
 } from "@/components/ui/popover"
 import { UserForm } from './details/userForm';
 import { useTranslation } from 'react-i18next';
+import { useUser } from '@/contexts/useUser';
 
 export function Home() {
     const { t } = useTranslation();
     const { step, currentStep } = useSteps();
+    const { user } = useUser();
 
     return (
         <div className='p-6 max-w-5xl mx-auto relative'>
@@ -19,7 +21,7 @@ export function Home() {
             {step === STEPS.InputForm && <div className='w-[500px] mx-auto text-center'>
                 <Button
                     disabled={!currentStep.canNextStep}
-                    onClick={currentStep.onNextStep}
+                    onClick={() => currentStep.onNextStep?.(user)}
                     className="cursor-pointer"
                 >
                     {currentStep.titleNext}
