@@ -19,5 +19,9 @@
     "developmentRecommendations_title": "Khuyến Nghị Phát Triển",
     "suitableCareers_title": "Nghề Nghiệp Phù Hợp",
     "negativeTendenciesToOvercome_title": "Khuynh Hướng Tiêu Cực Cần Vượt Qua",
-    "summary_title": "Tóm Lược"
+    "summary_title": "Tóm Lược",
+
+    "not have number in birthday chart": "Không có số  {{number}} nào trong biểu đồ ngày sinh",
+    "have number in birthday chart": "Có {{count}} số  {{number}} trong biểu đồ ngày sinh",
+    "This is an explanation for your birth chart": "Diễn giải biểu đồ ngày sinh của bạn"
 }

@@ -169,3 +169,79 @@ export const lifeAdditude_meaning_map = new Map<number, string>([
     [11, ""],
     [22, ""],
 ])
+
+export const birthday_chart_meaning_map = new Map<string, string>([
+  ["-1", `Số 1 thể hiện tự chủ, biểu tượng thể hiện cá tôi , cách thể hiện cái tôi hoặc dè nén cái tôi, thiếu tự chủ. Họ bị khó khăn trong diễn tả cái học đang nghĩ. Nhiều bạn được đánh giá là lãnh đạm, lạnh lùng, và dễ bị hiểu lầm trong lời nói... thực ra do họ không biết và không thể thể hiện được suy nghĩ mình. 
+Ngoài ra, những bạn thiếu số 1 là những bạn khá thụ động, hay trì hoãn.\n\n(+) Điền số 1 ảo:\n- Học cách suy nghĩ cẩn trọng trước khi phát biểu, tập phản ứng chậm lại trước các ý kiến, lời phê bình…. Bởi vì lời nói đã phát ra khó thu hồi lại được, mà cảm giác thương tổn cũng khó mà hàn gắn.\n- Viết nhật ký, tập cách chia sẻ suy nghĩ với bạn bè người thân mà bạn cảm thấy tin tưởng nhất.\n- Tập thiền hoặc yoga...2 môn này bạn có thể tự tập tại nhà hoặc ra các cơ sở để có người hướng dẫn. Nhưng nếu bạn không có đủ thời gian để ra các phòng Gym, bạn có thể đăng ký học qua các lớp dạy online.`],
+  ["-2", `Đừng lầm cho rằng một người không có số 2 trong biểu đồ ngày sinh thì sẽ hoàn toàn thiếu vắng trực giác hay độ nhạy cảm. Đúng hơn, việc không có số 2 chỉ muốn nhắc rằng người này cần phát triển trực giác và độ nhạy cảm nhiều hơn.\n\n(+) Điền số 2 ảo:\n- Tập những hoạt động tăng trực giác\n- Tập thiền và yoga.\n- Đọc kinh chú: bạn theo hoặc tin 1 tôn giáo nhất định đều có những quyển sách như vậy.\n- Ho’oponopono: phương pháp thiền của người hawai cổ đại. Cái này bạn tự tìm hiểu nhé, có rất nhiều sách nói về ho’oponopono ở ngoài nhà sách đấy. Mình đọc qua quyển: Ho’oponopono: Sống Như Người Hawaii – Chấp Nhận, Biết Ơn Và Tha Thứ. Đây chắc là 1 trong những quyển nói về ho’oponopono được nhiều người biết đến nhất ở Việt Nam, bạn có thể mua online theo link bên dưới.`],
+  ["-3", `Người thiếu vắng số 3 trong ngày sinh không có nghĩa người ấy yếu về phần trí, ngoại trừ khi người ấy không chống nổi tính lười và/hoặc tánh thờ ơ không quan tâm. Nói chính xác hơn, người thiếu số 3 sẽ cần cố gắng nhiều hơn trong các lĩnh vực phát triển tâm trí, đặc biệt là khi Con số chủ đạo của họ cũng không nằm trong nhóm số trí não nốt (tức không nằm trong các nhóm số 3,6,9). Tuy vậy, khuynh hướng ngả vào tính lười biếng ở những người này cũng cần được ghi nhận và điều chỉnh từ những năm tháng tuổi thơ, nếu không, điều này sẽ gây ra nhiều khó khăn cho họ sau này.\n\n(+) Điền số 3 ảo\n1/ Phá thế bằng TÊN RIÊNG có chữ C, L, U tương ứng với số 3. Bản thân những chữ cái trong cái tên cũng có những sóng rung tương ứng.\n2/ Ý nghĩa của Số 3 nằm ở bộ nhớ, ở việc học. Vì vậy, muốn có con số 3 ‘Ảo’ trong biểu đồ ngày sinh của mình, bạn chỉ cần luôn nhớ tìm HỌC một cái gì đó, là được. Tìm học bất kỳ thứ gì bạn quan tâm. Học làm bánh, nấu ăn, cắm hoa, tỉa củ, làm vườn…; học sơ cấp cứu, bấm huyệt, yoga…, học Phật pháp, học làm thơ làm văn học vẽ học chụp ảnh… Tóm lại, miễn sao bạn giữ bạn gắn liền với việc Học Hỏi, là tiềm thức của bạn sẽ tự đọc gắn Số 3 vô biểu đồ ngày sinh của bạn, từ đó, bạn vừa thoát khỏi trí đa nghi, hay vui buồn bất chợt.`],
+  ["-4", `Biểu đồ ngày sinh vắng số 4 (nghĩa là trong ngày sinh không có số 4) diễn tả người này tánh thường thiếu kiên nhẫn, nhưng mức độ thiếu kiên nhẫn sẽ còn thể hiện rõ ở những lĩnh vực nào thì còn phụ thuộc vào một số yếu tố khác, chẳng hạn như Con số chủ đạo, hay ngày sinh, hay các Mũi tên chỉ cá tính.\n\nChẳng hạn, người thiếu số 4 nhưng lại có đủ ba số 3-6-9 (Mũi tên Trí nhớ) sẽ thấy rất thiếu kiên nhẫn với những ai chậm hiểu. Những ai thiếu số 4 mà có đủ ba số 2-5-8 (Mũi tên chỉ Cân bằng cảm xúc) sẽ thấy thiếu kiên nhẫn với những ai không thể kiểm soát được cảm xúc của mình… Những sự thiếu kiên nhẫn như thế này có thể dần dần được cải thiện nếu ta ý thức được về điểm này và chú tâm vào từng chi tiết khiến những người kia bị yếu, và dùng lòng quan tâm, lòng thương của mình để cải hóa tánh khó chịu của mình dần dần, sẽ ổn.\n\n(+) Điền số 4 ảo: con số thể hiện năng động và thực tế.\n- Phụ giúp mọi người trong gia đình làm những việc nhỏ trong nhà: nấu cơm, rửa chén, quét dọn….`],
+  ["-5", `Người không có số 5 cũng là một sự thiệt thòi, vì nó hay dẫn đến những chỗ trống thành dãy ba số liền mạch ở các trục ngang chỉ tâm hồn (như 2-5-8) hay trục dọc (như 4-5-6) và cả hai trục xéo (như 1-5-9 hay 3-5-7), dẫn đến những Mũi tên trống chỉ nhiều bất lợi trong cá tính. Con Số 5 vô cùng cần thiết và quan trọng, có vai trò vị trí trung tâm, giống như tâm của đóa hoa, là cái nhân của một mạn đà là – một đàn tràng từ đó tỏa ra năng lượng tích cực, kết nối với tất cả các số còn lại. \n\n(+) Điền số 5 ảo:\n1/ Phá thế bằng TÊN RIÊNG có chữ N, E, W tương ứng với số 5. Bản thân những chữ cái trong cái tên cũng có những sóng rung tương ứng.\n2/ Chịu khó diễn đạt mình tự do, thoải mái hơn, vui buồn gì đều không tự giữ trong lòng.\n3/ Tập mở lòng và kết nối với mọi người xung quanh mình chủ động hơn, không tự cô lập mình.\n4/ Tập bày tỏ yêu thương đến mọi người, muôn loài thường xuyên hơn. Bày tỏ sự biết ơn với muôn người, muôn loài.\n5/ Tập đứng trước đám đông và diễn đạt ý kiến mình, mạnh dạn hơn. Nếu chưa làm được, khuyến khích tham gia các lớp kỹ năng sống, tâm lý sống hay các câu lạc bộ, đội nhóm...\n6/ Tập yoga hay các hoạt động thể dục tương đương. Lưu ý đến vùng cổ họng. Nơi đây có Luân xa số 5 – Trung tâm năng lượng có liên quan đến giao tiếp, kết nối. Khi chúng ta tập trung cho vùng Luân xa số 5 này thông suốt, con Số 5 Ảo sẽ từ từ được ‘điền’ vào Biểu đồ ngày sinh của bạn.`],
+  ["-6", `Biểu đồ vắng số 6 chỉ ra rằng bạn cần phát triển óc sáng tạo thông qua các vùng mà các số khác họ có phụ trách. Nếu bạn có số 3, việc này sẽ dễ thực hiện hơn. Nếu không có số 3 luôn, bạn cần phải huy động nỗ lực tận tâm hơn mới mong phát triển tốt cá tính của mình.\n\n(+) Điền số 6 ảo:\n1/ Phá thế bằng TÊN RIÊNG có chữ F, O, X tương ứng với số 6. Bản thân những chữ cái trong cái tên cũng có những sóng rung tương ứng.\n2/ Con số của sự sáng tạo, vậy bạn nên học 1 môn nghệ thuật như âm nhạc, vẽ, viết blog…. tất cả những môn nghệ thuật này đều gắn liền với sự sáng tạo.\n3/ Học cách thể hiện tình thương của mình với mọi người, sự vật, sự việc ở trên nhiều phương diện khác nhau. Khuyến khích gắn bó với gia đình, làm các việc nhà, sắp xếp phòng, nhà cửa, tưới cây, trồng hoa… vừa tăng ý thức với thiên nhiên vừa gắn bó với mái ấm nhà mình.`],
+  ["-7", `Những người thiếu con số 7 trong biểu đồ ngày sinh sẽ nằm trong hai trường hợp:\n+ Hoặc là con người này đã vượt qua được những bài học hy sinh trong những kiếp sống trước đây nên kiếp này khỏi cần học lại thêm nữa (thật đáng mừng thay);\n+ Hoặc là (trường hợp này phổ biến hơn), nó ám chỉ rằng con người này chưa hiểu được giá trị của hạnh hy sinh, và họ phải nỗ lực chủ động thực hiện trước để tự cảm nhận giá trị này\n\n(+) Điền số 7 ảo: Bắt tay vào làm những thứ mà bạn cho là đúng để mình tự trải nghiệm qua nó rút ra được bài học cho bản thân mình.`],
+  ["-8", `Những biểu đồ ngày sinh hoàn toàn không có con số 8 chỉ ra rằng những người này cần phải nỗ lực nhiều để đạt được độ độc lập hay trí tuệ đáng mơ ước, làm cho cuộc sống của họ thêm đầy đặn và đáng sống hơn nữa.\n\n(+) Điền số 8 ảo:\n- Tập những hoạt động tăng trực giác\n- Tập thiền và yoga.\n- Đọc kinh chú: bạn theo hoặc tin 1 tôn giáo nhất định đều có những quyển sách như vậy.\n- Ho’oponopono: phương pháp thiền của người hawai cổ đại. Cái này bạn tự tìm hiểu nhé, có rất nhiều sách nói về ho’oponopono ở ngoài nhà sách đấy. Mình đọc qua quyển: Ho’oponopono: Sống Như Người Hawaii – Chấp Nhận, Biết Ơn Và Tha Thứ. Đây chắc là 1 trong những quyển nói về ho’oponopono được nhiều người biết đến nhất ở Việt Nam, bạn có thể mua online theo link bên dưới.`],
+  ["-9", `Không có số 9 trong ngày sinh không có nghĩa là bạn không có trách nhiệm, hoài bão hay lý tưởng. Điều này chỉ muốn nhắc nhở các cá nhân này cần nỗ lực hơn nữa để thể hiện những giá trị này rõ nét hơn, để tạo nên một xã hội hài hòa, luôn tiến về phía trước với sự cân bằng, điều độ.\n\n(+) Điền số 9 ảo: Tự đặt cho mình những mục tiêu nho nhỏ để thực hiện, ví dụ như tuần này mình sẽ đọc hết 1 quyển sách, tháng này mình sẽ để giành 500k…..sau khi đạt được những mục tiêu nhỏ hãy đặt những mục tiêu to dần lên nhưng vừa với khả năng của bạn ở thời điểm đó.`],
+
+  // 1
+  ["1", ``],
+  ["11", ``],
+  ["111", ``],
+  ["1111", ``],
+  ["11111", ``],
+
+  // 2
+  ["2", ``],
+  ["22", ``],
+  ["222", ``],
+  ["2222", ``],
+  ["22222", ``],
+
+  // 3
+  ["3", ``],
+  ["33", ``],
+  ["333", ``],
+  ["3333", ``],
+  ["33333", ``],
+
+  // 4
+  ["4", ``],
+  ["44", ``],
+  ["444", ``],
+  ["4444", ``],
+  ["44444", ``],
+
+  // 5
+  ["5", ``],
+  ["55", ``],
+  ["555", ``],
+  ["5555", ``],
+  ["55555", ``],
+
+  // 6
+  ["6", ``],
+  ["66", ``],
+  ["666", ``],
+  ["6666", ``],
+  ["66666", ``],
+
+  // 7
+  ["7", ``],
+  ["77", ``],
+  ["777", ``],
+  ["7777", ``],
+  ["77777", ``],
+
+  // 8
+  ["8", ``],
+  ["88", ``],
+  ["888", ``],
+  ["8888", ``],
+  ["88888", ``],
+
+  // 9
+  ["9", ``],
+  ["99", ``],
+  ["999", ``],
+  ["9999", ``],
+  ["99999", ``],
+])

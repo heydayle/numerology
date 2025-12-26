@@ -9,7 +9,7 @@ export function Home() {
     const { user } = useUser();
 
     return (
-        <div className='p-6 max-w-5xl mx-auto relative'>
+        <div className='p-6 max-w-[1200px] mx-auto relative'>
             <h1 className='text-center text-2xl font-bold'>{t("numberology")}</h1>
             <hr className='my-4' />
             {currentStep.component}
