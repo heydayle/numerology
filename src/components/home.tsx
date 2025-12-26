@@ -1,11 +1,5 @@
 import { STEPS, useSteps } from '../contexts/useSteps'
 import { Button } from './ui/button';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
-import { UserForm } from './details/userForm';
 import { useTranslation } from 'react-i18next';
 import { useUser } from '@/contexts/useUser';
 
