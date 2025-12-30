@@ -5,7 +5,7 @@ import { useUser } from '@/contexts/useUser';
 
 export function Home() {
     const { t } = useTranslation();
-    const { step, currentStep, setStep, renew } = useSteps();
+    const { step, currentStep, renew } = useSteps();
     const { user } = useUser();
 
     return (
