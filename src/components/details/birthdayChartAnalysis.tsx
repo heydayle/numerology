@@ -44,7 +44,7 @@ export function BirthdayChartAnalysis(props: BirthdayChartAnalysisProps) {
         <div>
             {renderMeanings && 
                 <div className="mt-6">
-                    <h2 className="my-4 text-center text-xl font-bold uppercase">
+                    <h2 className="my-4 text-yellow-600 text-center text-xl font-bold uppercase">
                         {t('This is an explanation for your birth chart')}
                     </h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

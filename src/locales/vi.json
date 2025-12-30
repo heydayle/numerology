@@ -23,5 +23,6 @@
 
     "not have number in birthday chart": "Không có số  {{number}} nào trong biểu đồ ngày sinh",
     "have number in birthday chart": "Có {{count}} số  {{number}} trong biểu đồ ngày sinh",
-    "This is an explanation for your birth chart": "Diễn giải biểu đồ ngày sinh của bạn"
+    "This is an explanation for your birth chart": "Diễn giải biểu đồ ngày sinh của bạn",
+    "This is an explanation for your arrow of birth chart": "Diễn giải mũi tên cá tính theo biểu đồ ngày sinh"
 }

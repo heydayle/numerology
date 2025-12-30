@@ -22,5 +22,6 @@
 
     "not have number in birthday chart": "You don't have {number} on your birthday chart",
     "have number in birthday chart": "You have {count} number {number} in your birthday chart",
-    "This is an explanation for your birth chart.": "This is an explanation for your birth chart"
+    "This is an explanation for your birth chart.": "This is an explanation for your birth chart",
+    "This is an explanation for your arrow of birth chart": "This is an explanation for your arrow of birth chart"
 }

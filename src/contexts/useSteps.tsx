@@ -1,5 +1,5 @@
 import { UserForm } from '@/components/details/userForm';
-import { createContext, useContext, type ReactNode, useState, useMemo } from 'react';
+import { createContext, useContext, type ReactNode, useState, useMemo, useCallback } from 'react';
 import { useUser, type User } from './useUser';
 import { InformationOfNumber } from '@/components/details/InformationOfNumber';
 import { useTranslation } from 'react-i18next';
@@ -22,6 +22,7 @@ interface StepsContextType {
     step: Step
     setStep: (step: Step) => void
     currentStep: CurrentStep
+    renew: () => void
 }
 
 const StepsContext = createContext<StepsContextType | undefined>(undefined);
@@ -31,6 +32,13 @@ export function StepsProvider({ children }: { children: ReactNode }) {
     const [_, setSearchParams] = useSearchParams();
     const [step, setStep] = useState<Step>(STEPS.InputForm)
     const { mainNumber } = useUser();
+
+    const renew = useCallback(() => {
+        if (step !== STEPS.InputForm) {
+            setSearchParams('')
+            setStep(STEPS.InputForm)
+        }
+    }, [step])
 
     const nextToResult = (userFormData?: User) => {
         setStep(STEPS.Result)
@@ -63,7 +71,7 @@ export function StepsProvider({ children }: { children: ReactNode }) {
     }, [step, mainNumber])
 
     return (
-        <StepsContext.Provider value={{ step, setStep, currentStep }}>
+        <StepsContext.Provider value={{ step, setStep, currentStep, renew }}>
             {children}
         </StepsContext.Provider>
     );

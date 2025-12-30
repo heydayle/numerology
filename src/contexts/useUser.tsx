@@ -41,7 +41,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
         birthday: null
     });
     const [isLoading, setIsLoading] = useState(false);
-    const [date, setDate] = useState<Date | undefined>(new Date('1999-01-01'));
+    const [date, setDate] = useState<Date | undefined>();
 
     const init = useCallback(() => {
         const name = searchParams.get('name');
@@ -89,7 +89,11 @@ export function UserProvider({ children }: { children: ReactNode }) {
     const mainNumber = useMemo(() => {
         const total = sumDays + sumMonths + sumYears;
         if (total === 22) return total;
-        if (total > 11) return total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+        if (total > 11) {
+            const sumTotal = total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+            if (sumTotal > 11) return sumTotal.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+            return sumTotal
+        } 
         return total;
     }, [sumDays, sumMonths, sumYears]);
 
