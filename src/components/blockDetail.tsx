@@ -1,5 +1,4 @@
 import { Skeleton } from "./ui/skeleton";
-import TextType from "./bits/TextType";
 import { cn } from "@/lib/utils";
 
 type BlockDetailProps = {
@@ -27,15 +26,7 @@ export function BlockDetail({ type, style, title, description, isLoading, classN
                         <Skeleton className="h-[10px] w-1/3 rounded-full" />
                     </div>
                 )
-                :  <TextType 
-                        text={description}
-                        typingSpeed={25}
-                        pauseDuration={1500}
-                        showCursor={true}
-                        cursorCharacter="_"
-                        loop={false}
-                        className="whitespace-pre-line"
-                    />
+                :  <p className="whitespace-pre-line">{description}</p>
                 }
             </div>
         </div>
