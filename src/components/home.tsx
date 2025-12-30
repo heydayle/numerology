@@ -5,7 +5,7 @@ import { useUser } from '@/contexts/useUser';
 
 export function Home() {
     const { t } = useTranslation();
-    const { step, currentStep, setStep } = useSteps();
+    const { step, currentStep, setStep, renew } = useSteps();
     const { user } = useUser();
 
     return (
@@ -13,7 +13,7 @@ export function Home() {
             <h1 className='text-center text-2xl font-bold'>{t("numberology")}</h1>
             <hr className='my-4' />
             {currentStep.component}
-            {step === STEPS.InputForm && <div className='w-[500px] mx-auto text-center'>
+            {step === STEPS.InputForm && <div className='md:w-[500px] mx-auto text-center'>
                 <Button
                     disabled={!currentStep.canNextStep}
                     onClick={() => currentStep.onNextStep?.(user)}
@@ -22,7 +22,7 @@ export function Home() {
                     {currentStep.titleNext}
                 </Button>
             </div>}
-            {step === STEPS.Result && <Button variant="outline" className="fixed bottom-6 right-10" onClick={() => setStep(STEPS.InputForm)}>Renew</Button>}
+            {step === STEPS.Result && <Button variant="outline" className="fixed bottom-6 right-10" onClick={() => renew()}>Renew</Button>}
         </div>
     )
 }

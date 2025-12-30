@@ -41,7 +41,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
         birthday: null
     });
     const [isLoading, setIsLoading] = useState(false);
-    const [date, setDate] = useState<Date | undefined>(new Date('1999-01-01'));
+    const [date, setDate] = useState<Date | undefined>();
 
     const init = useCallback(() => {
         const name = searchParams.get('name');

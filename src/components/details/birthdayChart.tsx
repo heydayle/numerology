@@ -1,6 +1,7 @@
 import { useUser } from "@/contexts/useUser"
 import { useTranslation } from "react-i18next"
 import { BirthdayChartAnalysis } from "./birthdayChartAnalysis"
+import { BirthdayChartArrow } from "./birthdayChartArrow"
 
 export type NumerologyChart = Record<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9, string>
 
@@ -53,11 +54,13 @@ export function buildNumerologyChart(date: Date): NumerologyChart {
 export function buildLoShuGrid(date: Date) {
   const c = buildNumerologyChart(date)
   return [
-    [c[3] || " ", c[6] || " ", c[9] || " "],
-    [c[2] || " ", c[5] || " ", c[8] || " "],
-    [c[1] || " ", c[4] || " ", c[7] || " "],
-  ] as const
+    [c[3] || "", c[6] || "", c[9] || ""],
+    [c[2] || "", c[5] || "", c[8] || ""],
+    [c[1] || "", c[4] || "", c[7] || ""],
+  ]
 }
+
+export type Grid = typeof buildLoShuGrid
 
 export function BirthdayChart() {
     const { t } = useTranslation();
@@ -102,6 +105,9 @@ export function BirthdayChart() {
             </div>}
             <div>
                 <BirthdayChartAnalysis chartValue={chart} />
+            </div>
+            <div>
+              <BirthdayChartArrow grid={loShuGrid} />
             </div>
         </div>
     )
