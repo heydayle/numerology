@@ -26,7 +26,7 @@ export function BirthdayChartAnalysis(props: BirthdayChartAnalysisProps) {
         return getBirthdayChartMeaning(LOCALES, convertEmptyToNumber)
     }, [convertEmptyToNumber])
 
-    const renderMeanings = useMemo(() => {
+    const renderMeanings = (): { key: string, title: string, description: string } [] | null => {
         if (!meaningByChart) return null
 
         const convertToArray: { key: string, title: string, description: string }[] = []
@@ -38,17 +38,17 @@ export function BirthdayChartAnalysis(props: BirthdayChartAnalysisProps) {
             convertToArray.push({ key, description: value.description, title })
         }
         return convertToArray
-    }, [meaningByChart])
+    }
 
     return (
         <div>
-            {renderMeanings && 
+            {renderMeanings() && 
                 <div className="mt-6">
                     <h2 className="my-4 text-yellow-600 text-center text-xl font-bold uppercase">
                         {t('This is an explanation for your birth chart')}
                     </h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                        {renderMeanings.map((mean, index) => {
+                        {renderMeanings()?.map((mean, index) => {
                             return (
                                 <BlockDetail
                                     className={index === 8 ? 'lg:col-span-2' : ''}

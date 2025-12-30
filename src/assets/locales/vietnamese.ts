@@ -443,7 +443,7 @@ export type Arrow = {
   description: string
 }
 const arrow_meanings: Record<number, Arrow[]> = {
-  159: [
+  951: [
     {
       title: `(+) MŨI TÊN QUYẾT TÂM:`,
       description: `- Người có Mũi tên Quyết tâm rất kiên trì thực hiện Bất kỳ điều gì họ muốn làm, vượt qua mọi trở ngại, làm cho đến khi nào được thì thôi. Tuy vậy, đôi khi sự quyết tâm quá độ dẫn đến… sự cố chấp bướng bỉnh, đâm đầu giải quyết một vấn đề dù biết không lối thoát hoặc không cần thiết, dẫn đến mất nhiều thời gian hay tiêu hao nhiều năng lượng, mất thời gian. Một trong những bài học lớn nhất mà người có Mũi tên Quyết tâm nên thấu: Không phải vấn đề nào cũng cần phải giải quyết.
@@ -605,7 +605,7 @@ Trẻ em có Mũi tên trống 3-6-9 được tác giả David A. Phillip khuyê
   ],
 }
 export const arrow_having_chart_map = new Map<string, Arrow>([
-  ["159", arrow_meanings[159][0]],
+  ["951", arrow_meanings[951][0]],
   ["357", arrow_meanings[357][0]],
   ["369", arrow_meanings[369][0]],
   ["258", arrow_meanings[258][0]],
@@ -615,7 +615,7 @@ export const arrow_having_chart_map = new Map<string, Arrow>([
   ["987", arrow_meanings[987][0]],
 ])
 export const arrow_have_not_chart_map = new Map<string, Arrow>([
-  ["159", arrow_meanings[159][1]],
+  ["951", arrow_meanings[951][1]],
   ["357", arrow_meanings[357][1]],
   ["369", arrow_meanings[369][1]],
   ["258", arrow_meanings[258][1]],

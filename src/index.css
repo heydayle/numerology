@@ -140,14 +140,35 @@
   @apply top-[150px] left-[-90px] rotate-90
 }
 .centerColumns {
-  @apply top-[150px] left-0 rotate-90
+  @apply top-[150px] left-2 rotate-90
 }
 .endColumn {
   @apply top-[150px] left-[105px] rotate-90
 }
 .startDiagonals {
-  @apply top-[150px] -left-8 -rotate-45 w-[120%]
+  @apply top-[150px] -left-11 -rotate-45 w-[130%]
 }
 .endDiagonals {
-  @apply top-[150px] -left-8 rotate-45 w-[120%] 
+  @apply top-[150px] -left-9 rotate-45 w-[130%] 
+}
+
+.animated-line {
+  animation-name: opacityAniamtion;
+  animation-duration: 4s; 
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes opacityAniamtion {
+  0% {
+    opacity: 0%;
+    border-style: dotted;
+  }
+  50% {
+    border-style: dashed;
+  }
+  100% {
+    opacity: 100%;
+    border-style: solid;
+  }
 }

@@ -73,7 +73,7 @@ function collectWithPosition(grid: Grid & [][]) {
     if (ok) {
       diagonals.push({
         value: diag.map(firstChar).join(""),
-        position: "startDiagonals",
+        position: "endDiagonals",
       });
     }
   }
@@ -95,7 +95,7 @@ function collectWithPosition(grid: Grid & [][]) {
     if (ok) {
       diagonals.push({
         value: diag.map(firstChar).join(""),
-        position: "endDiagonals",
+        position: "startDiagonals",
       });
     }
   }
@@ -123,14 +123,6 @@ type EmptyLineResult = {
 
 const isEmpty = (v: Cell) => v == null || String(v).trim() === "";
 
-/**
- * Order QUAN TRỌNG để khớp label bạn đưa:
- * - Rows: left -> right (top/middle/bottom) => 369, 258, 147
- * - Columns: bottom -> top (start/center/end) => 123, 456, 789
- * - Diagonals:
- *   - startDiagonals: bottom-left -> top-right => 159
- *   - endDiagonals: top-left -> bottom-right => 357
- */
 function labelFor3x3(kind: LineKind, index: number): LineLabel | string {
   if (kind === "row") return (["topRow", "middleRow", "bottomRow"][index] ?? `row${index}`) as any;
   if (kind === "column") return (["startColumns", "centerColumns", "endColumn"][index] ?? `col${index}`) as any;

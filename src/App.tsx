@@ -6,9 +6,9 @@ export function App() {
         <>
             <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
                 <Particles
-                    particleColors={['#ffffff', '#ffffff']}
-                    particleCount={200}
-                    particleSpread={10}
+                    particleColors={['#ffffff', '#6e47fcff']}
+                    particleCount={500}
+                    particleSpread={20}
                     speed={0.1}
                     particleBaseSize={100}
                     moveParticlesOnHover={true}

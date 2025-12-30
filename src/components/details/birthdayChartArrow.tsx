@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 import type { Arrow } from "@/assets/locales/vietnamese"
 
 type BirthdayChartArrowProps = {
-    meaningByChart: Arrow[]
+    meaningByChart: Arrow[] | null
 }
 export function BirthdayChartArrow(props: BirthdayChartArrowProps) {
     const { t } = useTranslation();
@@ -20,10 +20,10 @@ export function BirthdayChartArrow(props: BirthdayChartArrowProps) {
                             return (
                                 <BlockDetail
                                     className={index === 8 ? 'lg:col-span-2' : ''}
-                                    type={mean.title}
+                                    type={mean?.title}
                                     style="text-blue-500"
-                                    title={mean.title}
-                                    description={mean.description}
+                                    title={mean?.title}
+                                    description={mean?.description}
                                 />
                             )
                         })}

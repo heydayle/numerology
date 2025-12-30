@@ -93,7 +93,7 @@ export function BirthdayChart() {
     const renderArrows = () => {
       const positions = arrowMeaningWithPositions?.positions || []
 
-      return positions.map((items) => (<div className={`absolute h-[0.5px] w-full bg-yellow-400 ${items}`} />))
+      return positions.map((items) => (<div className={`absolute h-[0.5px] w-full border-b border-b-yellow-400 animated-line ${items}`} />))
     }
 
     return (
@@ -116,7 +116,9 @@ export function BirthdayChart() {
                       {renderItem(loShuGrid[2][1])}
                       {renderItem(loShuGrid[2][2])}
                   </div>
-                  {renderArrows()}
+                  <div className="w-full">
+                    {renderArrows()}
+                  </div>
                 </div>
             </div>}
             <div>
