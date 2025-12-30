@@ -142,12 +142,12 @@
 .centerColumns {
   @apply top-[150px] left-0 rotate-90
 }
-.endColumns {
+.endColumn {
   @apply top-[150px] left-[105px] rotate-90
 }
 .startDiagonals {
-  @apply top-[150px] left-0 -rotate-45
+  @apply top-[150px] -left-8 -rotate-45 w-[120%]
 }
 .endDiagonals {
-  @apply top-[150px] left-0 rotate-45
+  @apply top-[150px] -left-8 rotate-45 w-[120%] 
 }
