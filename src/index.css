@@ -127,3 +127,27 @@
     @apply font-sans text-sm;
     }
 }
+.topRow {
+  @apply top-[50px] left-2
+}
+.middleRow {
+  @apply top-[150px] left-2
+}
+.bottomRow {
+  @apply bottom-[50px] left-2
+}
+.startColumns {
+  @apply top-[150px] left-[-90px] rotate-90
+}
+.centerColumns {
+  @apply top-[150px] left-0 rotate-90
+}
+.endColumns {
+  @apply top-[150px] left-[105px] rotate-90
+}
+.startDiagonals {
+  @apply top-[150px] left-0 -rotate-45
+}
+.endDiagonals {
+  @apply top-[150px] left-0 rotate-45
+}

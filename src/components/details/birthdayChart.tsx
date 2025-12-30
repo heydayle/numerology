@@ -2,6 +2,8 @@ import { useUser } from "@/contexts/useUser"
 import { useTranslation } from "react-i18next"
 import { BirthdayChartAnalysis } from "./birthdayChartAnalysis"
 import { BirthdayChartArrow } from "./birthdayChartArrow"
+import { useMemo } from "react"
+import { getBirthdayArrowMeaning } from "@/assets/MapBirthdayArrowChartByLocales"
 
 export type NumerologyChart = Record<1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9, string>
 
@@ -51,18 +53,19 @@ export function buildNumerologyChart(date: Date): NumerologyChart {
  * 2 5 8
  * 1 4 7
  */
-export function buildLoShuGrid(date: Date) {
+export type Grid = string[][] & [][]
+
+export function buildLoShuGrid(date: Date): Grid {
   const c = buildNumerologyChart(date)
   return [
     [c[3] || "", c[6] || "", c[9] || ""],
     [c[2] || "", c[5] || "", c[8] || ""],
     [c[1] || "", c[4] || "", c[7] || ""],
-  ]
+  ] as any
 }
 
-export type Grid = typeof buildLoShuGrid
-
 export function BirthdayChart() {
+    const LOCALES = 'vi'
     const { t } = useTranslation();
     const { user } = useUser();
     if (!user.birthday) {
@@ -72,7 +75,7 @@ export function BirthdayChart() {
     const date = new Date(user.birthday.year, user.birthday.month, user.birthday.day);
 
     const chart = buildNumerologyChart(date) // {1:"111",2:"",...,9:"999"}
-    const loShuGrid = buildLoShuGrid(date)
+    const loShuGrid = buildLoShuGrid(date) as Grid
     const itemClass = "w-28 h-28 border p-4 flex items-center justify-center bg-neutral-800/20 filter backdrop-blur-sm"
 
     const renderItem = (value: string) => {
@@ -83,31 +86,44 @@ export function BirthdayChart() {
         )
     }
 
+    const arrowMeaningWithPositions = useMemo(() => {
+      return getBirthdayArrowMeaning(LOCALES, loShuGrid)
+    }, [loShuGrid])
+
+    const renderArrows = () => {
+      const positions = arrowMeaningWithPositions?.positions || []
+
+      return positions.map((items) => (<div className={`absolute h-[0.5px] w-full bg-yellow-400 ${items}`} />))
+    }
+
     return (
         <div className="flex flex-col">
             {<div className="mt-4 text-center">
                 <h2 className="text-lg font-bold mb-6 uppercase">{t('birthday chart')}</h2>
-                <div className="grid grid-cols-3 gap-4 max-w-xs mx-auto text-center">
-                    {renderItem(loShuGrid[0][0])}
-                    {renderItem(loShuGrid[0][1])}
-                    {renderItem(loShuGrid[0][2])}
-                </div>
-                <div className="grid grid-cols-3 gap-4 max-w-xs mx-auto text-center">
-                    {renderItem(loShuGrid[1][0])}
-                    {renderItem(loShuGrid[1][1])}
-                    {renderItem(loShuGrid[1][2])}
-                </div>
-                <div className="grid grid-cols-3 gap-4 max-w-xs mx-auto text-center">
-                    {renderItem(loShuGrid[2][0])}
-                    {renderItem(loShuGrid[2][1])}
-                    {renderItem(loShuGrid[2][2])}
+                <div className="relative max-w-xs mx-auto">
+                  <div className="grid grid-cols-3 gap-4 max-w-xs mx-auto text-center">
+                      {renderItem(loShuGrid[0][0])}
+                      {renderItem(loShuGrid[0][1])}
+                      {renderItem(loShuGrid[0][2])}
+                  </div>
+                  <div className="grid grid-cols-3 gap-4 max-w-xs mx-auto text-center">
+                      {renderItem(loShuGrid[1][0])}
+                      {renderItem(loShuGrid[1][1])}
+                      {renderItem(loShuGrid[1][2])}
+                  </div>
+                  <div className="grid grid-cols-3 gap-4 max-w-xs mx-auto text-center">
+                      {renderItem(loShuGrid[2][0])}
+                      {renderItem(loShuGrid[2][1])}
+                      {renderItem(loShuGrid[2][2])}
+                  </div>
+                  {renderArrows()}
                 </div>
             </div>}
             <div>
                 <BirthdayChartAnalysis chartValue={chart} />
             </div>
             <div>
-              <BirthdayChartArrow grid={loShuGrid} />
+                <BirthdayChartArrow meaningByChart={arrowMeaningWithPositions?.arrowMeaningMapping || []} />
             </div>
         </div>
     )
