@@ -6,9 +6,16 @@
     "analysis": "Analysis",
 
     "life path number": "Life Path Number",
+    "life path number subtitle": "The Life Path Number is considered the most important of the core numbers. It reveals the main outline of your future life, the path you will take throughout your life, and the elements that shape that path. This number reveals the lessons you will learn, the challenges you will face, and the opportunities you will receive in the form of an overarching outline. Whether or not to believe in this number is your choice, but in the realm of numerology, following your Life Path Number is considered the most fulfilling option. Any positive characteristics associated with this number indicate special skills and abilities that can support you in all aspects of life. Negative characteristics associated with each number show your shortcomings. More accurately, it points to areas in your inner life and outer activities that you need to pay attention to in order to find balance.",
     "birthday number": "Birthday Number",
     "life additude": "Life Attitude",
     "birthday chart": "Birthday chart",
+    "power of your name": "Power of your name",
+    "name number subtitle ": "Discover your innate talents and inherent qualities through your name. This number, also known as the Life Number or Manifestation Number, highlights your strengths and weaknesses throughout your life. If your Life Number reveals your path, your Manifestation Number reveals the nuances and characteristics of those steps. From a cyclical perspective, the Life Path Number represents the lessons you need to learn throughout your life. In connection with this, your Manifestation Number analyzes the core qualities you offer to this world, including your personal history from past lives. This number is so named because it represents the innate qualities of the human ego and the inherited traits you benefit from at birth.",
+    "character style": "Your personality type is summarized in these keywords:",
+    "your soul number":"Your Destiny Number {{numberOfName}} represents what your soul needs to be content with.",
+    "your deepest purpose in life": "Your deepest purpose in life. The person you aspire to be and the things you desire to have and achieve. The relationships you are nurturing or avoiding.\nYour true self is revealed through the meaning of your Soul Number. The number \"{{vowelNumber}}\", which you are living, expressing, and aspiring to:",
+    "the personality you interact": "The personality you interact with the outside world, your primary personality traits, and how people perceive you, is revealed through the meaning of your Life Adtitude Number. The number \"{{lifeAdtitudeNumber}}\"",
 
     "destiny_title": "Destiny",
     "overview_title": "Overview",

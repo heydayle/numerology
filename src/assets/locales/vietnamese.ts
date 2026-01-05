@@ -624,3 +624,44 @@ export const arrow_have_not_chart_map = new Map<string, Arrow>([
   ["654", arrow_meanings[654][1]],
   ["987", arrow_meanings[987][1]],
 ])
+export const name_number_meaning_map = new Map<number, string>([
+  [1, `- Được là chính mình trong sự tranh đấu, ganh đua.
+- Được mọi người thừa nhận năng lực
+- Được chinh phục, chiến thắng và vinh quang.`],
+  [2, `- Được là chính mình trong tình yêu, sự hòa hợp
+- Được kết nối với mọi người và chia sẻ với nhau
+- Được sử dụng năng khiếu, các giác quan của bản thân khi giải quyết vấn đề nào đó`],
+  [3, `- Được là chính mình trong những phương thức biểu diễn như: viết lách, chơi nhạc, ca hát, ảo thuật, kể chuyện v.v.v.
+- Được thỏa mãn đam mê sáng tạo, phá vỡ giới hạn và lề lối thông thường
+- Được làm điều tốt đẹp cho người khác và nhận được sự sẻ chia trở lại`],
+  [4, `- Được là chính mình khi đã chu toàn mọi việc, thực hiện tất cả suy nghĩ trong đầu
+- Được tìm tòi, học tập và chia sẻ hiểu biết với người khác
+- Được cảm giác an toàn từ những người thân yêu`],
+  [5, `- Được là chính mình khi tự do, khám phá như thám hiểm, du lịch, hoặc trong các công việc như khảo cổ học.
+- Được hưởng thụ cuộc sống theo cách riêng của bản thân
+- Được giao tiếp và kết nối với mọi người không kể xa gần, quen hay lạ.`],
+  [6, `- Được là chính mình khi hoàn thành các trọng trách tự đặt ra của bản thân
+- Được chinh phục những đỉnh cao và khó khăn trong cuộc sống
+- Được tạo lập những đế chế riêng như cửa hàng, doanh nghiệp hay hệ thống sản phẩm.`],
+  [7, `- Được là chính mình khi gắn liền với thiên nhiên, cuộc sống hòa hợp với tự nhiên
+- Được sống với triết lý và niềm tin cá nhân
+- Được làm những điều bản thân tin tưởng cho dù đi ngược với phần còn lại`],
+  [8, `- Được là chính mình với niềm tin về sự thật, lý lẽ và bản ngã
+- Được lãnh đạo mọi người thực hiện những điều tốt đẹp
+- Được bảo vệ lẽ phải và sự công bằng`],
+  [9, `- Được là chính mình khi được cống hiến với những điều thiêng liêng nhất
+- Được sống với từng khoảnh khắc trong cuộc đời
+- Được làm những điều tốt đẹp với gia đình và bạn bè`],
+])
+
+export const character_number_meaning_map = new Map<number, string>([
+  [1, "Người khởi xướng hành động, đi tiên phong, dẫn đầu, độc lập, đạt mục tiêu, chủ nghĩa cá nhân"],
+  [2, "Hợp tác, thích nghi, quan tâm đến người khác, đối tác, trung gian hòa giải"],
+  [3, "Diễn đạt, phát biểu, giao tiếp, nghệ thuật, tận hưởng cuộc sống"],
+  [4, "Nền tảng của giá trị, trật tự, phục vụ, chống lại những giới hạn, phát triển bền vững"],
+  [5, "Mở rộng, triển vọng, phiêu lưu, tận dụng tốt sự tự do"],
+  [6, "Trách nhiệm, bảo vệ, nuôi dưỡng, cộng đồng, cân bằng, đồng cảm"],
+  [7, "Phân tích, hiểu biết, kiến thức, nhận thức, cẩn trọng, suy ngẫm"],
+  [8, "Nỗ lực thực tiễn, quan tâm địa vị, tìm kiếm quyền lực, mục tiêu vật chất"],
+  [9, "Nhân văn, rộng lượng, vị tha, bổn phận, diễn đạt sáng tạo"],
+])

@@ -89,7 +89,7 @@ export function UserForm() {
                             </PopoverContent>
                         </Popover>
                         <Label className='w-fit mx-auto my-4 text-xl'>
-                            {date ? formatDate(date) : t("please select your birthday")}
+                            {user.name ? `${user.name} - ` : ''}{date ? formatDate(date) : t("please select your birthday")}
                         </Label>
                     </div>
                     

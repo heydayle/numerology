@@ -29,6 +29,8 @@ interface UserContextType {
     mainNumber: number;
     birthdayNumber: number;
     lifeAdtitudeNumber: number;
+    vowelNumber: number;
+    numberOfName: number;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -107,6 +109,51 @@ export function UserProvider({ children }: { children: ReactNode }) {
         return total < 10 ? total : total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
     }, [sumDays, sumMonths]);
 
+    const VOWELS_VALUE = {
+        'A': 1,
+        'E': 5,
+        'I': 9,
+        'J': 1,
+        'O': 6,
+        'U': 3,
+        'Y': 7,
+    } as Record<string, number>
+
+    const vowelNumber = useMemo<number>(() => {
+        if (!user.name) return 0
+        const objVowels = {
+            'A': 0,
+            'E': 0,
+            'I': 0,
+            'J': 0,
+            'O': 0,
+            'U': 0,
+            'Y': 0,
+        } as Record<string, number>
+        const arrName = user.name.toUpperCase().split('')
+
+        arrName.forEach((char) => {
+            if (Object.keys(VOWELS_VALUE).includes(char))
+                objVowels[char] += VOWELS_VALUE[char]
+        })
+        let nameValue = 0
+        Object.values(objVowels).forEach((value) => nameValue += value)
+
+        if (nameValue > 9) {
+            return nameValue.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+        }
+        return nameValue
+    }, [user])
+
+    const numberOfName = useMemo<number>(() => {
+        if (!user.name || !user.birthday) return 0
+        const total = vowelNumber + lifeAdtitudeNumber
+        if (total < 10) {
+            return total
+        }
+        return total.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+    }, [user])
+
     const onChangeName = (name: string) => {
         setUser((prev) => ({
             ...prev,
@@ -127,7 +174,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
     }, [date]);
 
     return (
-        <UserContext.Provider value={{ user, setUser, isLoading, setIsLoading, date, setDate, onChangeName, onSetBirthday, sumDays, sumMonths, sumYears, mainNumber, birthdayNumber, lifeAdtitudeNumber }}>
+        <UserContext.Provider value={{ user, setUser, isLoading, setIsLoading, date, setDate, onChangeName, onSetBirthday, sumDays, sumMonths, sumYears, mainNumber, birthdayNumber, lifeAdtitudeNumber, vowelNumber, numberOfName }}>
             {children}
         </UserContext.Provider>
     );

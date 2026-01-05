@@ -14,7 +14,7 @@ export function BlockDetail({ type, style, title, description, isLoading, classN
     const classNameBind = cn('px-4 py-6 bg-neutral-900/20 border border-neutral-900 filter backdrop-blur-sm rounded-lg shadow-md', [className])
     return (
         <div key={type} className={classNameBind}>
-            {title && <h3 className={`text-xl font-semibold mb-4 ${style}`}>{ title }</h3>}
+            {title && <h3 className={`text-xl font-semibold mb-4 whitespace-pre-line ${style}`}>{ title }</h3>}
             <div className="text-neutral-300">
                 {isLoading 
                 ? (
