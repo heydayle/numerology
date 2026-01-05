@@ -2,6 +2,7 @@ import { STEPS, useSteps } from '../contexts/useSteps'
 import { Button } from './ui/button';
 import { useTranslation } from 'react-i18next';
 import { useUser } from '@/contexts/useUser';
+import { SidebarTrigger } from './ui/sidebar';
 
 export function Home() {
     const { t } = useTranslation();
@@ -10,7 +11,10 @@ export function Home() {
 
     return (
         <div className='p-6 max-w-[1200px] mx-auto relative'>
-            <h1 className='text-center text-2xl font-bold'>{t("numberology")}</h1>
+            <div className="sticky top-10 z-10 flex justify-between p-4 bg-black/20 filter backdrop-blur-sm">
+                <h1 className='text-center text-2xl font-bold'>{t("numberology")}</h1>
+                {step === STEPS.Result && <SidebarTrigger size="sm" className="text-right!" />}
+            </div>
             <hr className='my-4' />
             {currentStep.component}
             {step === STEPS.InputForm && <div className='md:w-[500px] mx-auto text-center'>

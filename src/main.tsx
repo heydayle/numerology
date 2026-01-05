@@ -8,16 +8,19 @@ import App from "./App.tsx"
 import './i18n';
 import { UserProvider } from "./contexts/useUser.tsx"
 import { StepsProvider } from "./contexts/useSteps.tsx"
+import { SidebarProvider } from "@/components/ui/sidebar"
 
 const routes = createBrowserRouter([
   {
     path: "/",
     element: (
-      <UserProvider>
-        <StepsProvider>
-            <App />
-        </StepsProvider>
-      </UserProvider>
+      <SidebarProvider>
+        <UserProvider>
+          <StepsProvider>
+              <App />
+          </StepsProvider>
+        </UserProvider>
+      </SidebarProvider>
     ),
   },
 ]);

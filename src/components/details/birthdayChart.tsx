@@ -97,7 +97,7 @@ export function BirthdayChart() {
     }
 
     return (
-        <div className="flex flex-col">
+        <div id="birthday-chart" className="flex flex-col">
             {<div className="mt-4 text-center">
                 <h2 className="text-lg font-bold mb-6 uppercase">{t('birthday chart')}</h2>
                 <div className="relative max-w-xs mx-auto">

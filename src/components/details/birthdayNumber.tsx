@@ -8,7 +8,7 @@ export function BirthdayNumber() {
     const { birthdayNumber, lifeAdtitudeNumber, isLoading } = useUser();
     const { birthday, additude } = useKeyNumber();
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div id="birthday-number" className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             <div className="l">
                 <div className="text-center my-4">
                     <h2 className="text-2xl font-bold uppercase">{t("birthday number")}</h2>

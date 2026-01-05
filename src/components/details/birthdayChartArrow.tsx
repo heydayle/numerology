@@ -9,7 +9,7 @@ export function BirthdayChartArrow(props: BirthdayChartArrowProps) {
     const { t } = useTranslation();
 
     return (
-        <div>
+        <div id="birthday-arrow">
             {props.meaningByChart && 
                 <div className="mt-6">
                     <h2 className="my-4 text-yellow-600 text-center text-xl font-bold uppercase">

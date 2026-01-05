@@ -26,7 +26,7 @@ export function DetailsNumber() {
 
     return (
         <>
-            <div className="mt-4 text-center my-4">
+            <div id="life-path-number" className="mt-4 text-center my-4">
                 <div className="flex gap-2 justify-center items-center">
                     <h2 className="text-2xl font-bold uppercase">{t("life path number")}</h2>
                     <Tooltip>

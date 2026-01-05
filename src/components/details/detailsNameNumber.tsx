@@ -25,7 +25,7 @@ export function DetailsNameNumber() {
 
     return (
         <>
-            <div className="mt-6 text-center my-4">
+            <div id="power-of-name" className="mt-6 text-center my-4">
                 <div className="flex gap-2 justify-center items-center">
                     <h2 className="text-2xl font-bold uppercase">{t("power of your name")}</h2>
                     <Tooltip>
