@@ -1,5 +1,4 @@
 import { useKeyNumber } from "@/contexts/useKeyNumber";
-import { typeLifePathNumbersStrings, type GeneralItemType } from "@/assets/MapKeyNumberByLocales";
 import { useUser } from "@/contexts/useUser";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
