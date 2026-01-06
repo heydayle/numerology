@@ -9,6 +9,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
+  SidebarTrigger,
 } from "@/components/ui/sidebar"
 
 // Menu items.
@@ -45,15 +46,18 @@ export function AppSidebar() {
     <Sidebar side="right">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Pagination</SidebarGroupLabel>
-          <SidebarGroupContent>
+          <SidebarGroupLabel>
+            <SidebarTrigger size="sm" className="-ml-2" />
+            <span className="text-lg">Navigation</span>
+          </SidebarGroupLabel>
+          <SidebarGroupContent className="mt-2">
             <SidebarMenu>
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
                     <a href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
+                      <item.icon size={24}/>
+                      <span className="text-sm">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
