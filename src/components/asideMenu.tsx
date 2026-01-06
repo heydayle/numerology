@@ -39,6 +39,11 @@ const items = [
     url: "#power-of-name",
     icon: Star,
   },
+  {
+    title: "Peaks and challenges",
+    url: "#peaks-and-challenges",
+    icon: Star,
+  },
 ]
 
 export function AppSidebar() {

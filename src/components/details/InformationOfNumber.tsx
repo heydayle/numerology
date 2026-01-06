@@ -5,6 +5,7 @@ import { BirthdayNumber } from "./birthdayNumber";
 import { BirthdayChart } from "./birthdayChart";
 import { DetailsNameNumber } from "./detailsNameNumber";
 import { AppSidebar } from "../asideMenu";
+import { Peaks } from "./peaks";
 
 export function InformationOfNumber() {
     const { mainNumber, birthdayNumber, lifeAdtitudeNumber, vowelNumber, numberOfName } = useUser();
@@ -26,6 +27,8 @@ export function InformationOfNumber() {
                 <BirthdayChart />
                 <hr className="my-4"/>
                 <DetailsNameNumber />
+                <hr className="my-4"/>
+                <Peaks />
             </KeyNumberProvider>
         </>
     )
