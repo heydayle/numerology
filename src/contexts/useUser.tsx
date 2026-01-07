@@ -31,9 +31,10 @@ interface UserContextType {
     lifeAdtitudeNumber: number;
     vowelNumber: number;
     numberOfName: number;
-    peaks: Record<string, any>[]
-    peakNumbers: number[]
-    challengeNumbers: number[]
+    peaks: Record<string, any>[];
+    peakNumbers: number[];
+    challengeNumbers: number[];
+    cycleNumber: number;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -244,6 +245,36 @@ export function UserProvider({ children }: { children: ReactNode }) {
         return uniqueNumbers
     }, [peaks])
 
+    function sumYearDigits(year: number): number {
+        const y = String(year).padStart(4, "0");
+        // LEFT + MID + MID + RIGHT
+        return Number(y[0]) + Number(y[1]) + Number(y[2]) + Number(y[3]);
+    }
+
+    /** Excel: nếu >10 thì lấy chữ số đầu + chữ số cuối (chỉ 1 lần) */
+    function reduceOnceIfGreaterThan10(n: number): number {
+        if (n <= 10) return n; // đúng logic ">10"
+        const s = String(n);
+        return Number(s[0]) + Number(s[s.length - 1]);
+    }
+
+    /**
+     * Tương đương công thức Excel:
+     * IF((sumYearDigits(todayYear)+B4+C4+E4+F4)>10,
+     *    firstDigit(sum)+lastDigit(sum),
+     *    sum)
+     */
+    function calcValueLikeExcel(date: Date): number {
+        const yearDigitsSum = sumYearDigits(date.getFullYear());
+        const total = yearDigitsSum + sumDays + sumMonths;
+        return reduceOnceIfGreaterThan10(total);
+    }
+
+    const cycleNumber = useMemo(() => {
+        return calcValueLikeExcel(new Date())
+    }, [user])
+
+
     const onChangeName = (name: string) => {
         setUser((prev) => ({
             ...prev,
@@ -283,6 +314,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
         peaks,
         peakNumbers,
         challengeNumbers,
+        cycleNumber,
     }
 
     return (

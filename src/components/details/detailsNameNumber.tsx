@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import CountUp from "../bits/CountUp";
 import { BlockDetail } from "../blockDetail";
-import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Button } from "../ui/button";
 
 export function DetailsNameNumber() {
@@ -28,14 +28,14 @@ export function DetailsNameNumber() {
             <div id="power-of-name" className="mt-6 text-center my-4">
                 <div className="flex gap-2 justify-center items-center">
                     <h2 className="text-2xl font-bold uppercase">{t("power of your name")}</h2>
-                    <Tooltip>
-                        <TooltipTrigger asChild>
+                    <Popover>
+                        <PopoverTrigger asChild>
                             <Button variant="outline" size="icon" className="rounded-full">?</Button>
-                        </TooltipTrigger>
-                        <TooltipContent color="neutral" className="w-120 p-4 text-md text-primary bg-neutral-800 border border-neutral-700">
+                        </PopoverTrigger>
+                        <PopoverContent color="neutral" className="w-120 p-4 text-md text-primary bg-neutral-800 border border-neutral-700">
                             {t("name number subtitle")}
-                        </TooltipContent>
-                    </Tooltip>
+                        </PopoverContent>
+                    </Popover>
                 </div>
                 
                 <div className="mt-2 text-8xl font-extrabold text-yellow-600">

@@ -49,9 +49,9 @@ export function Peaks() {
                 <div className="mt-4 border-b border-dashed border-yellow-400 w-24 mx-auto"></div>
             </div>
             <div className="text-lg italic">
-                Đường đời con người qua bốn đỉnh Kim Tử Tháp: các con số ở đỉnh Kim Tử Tháp mang đến những thông tin bổ sung cho Con số chủ đạo, qua đó bạn hình dung được trong đoạn đường đời đó bạn nên thiên về hướng nào thì mới đạt được thành công vượt trội. Hãy nhớ rằng để đỉnh cao thực sự là đỉnh cao năng lực bạn thì ngay từ những năm trước đó phải có sự chuẩn bị, sẵn sàng, học hỏi và khảo nghiệm.
+                {t('peaks subtitle')}
             </div>
-            <div className="mt-4 grid grid-cols-4 gap-4">
+            <div className="mt-4 grid grid-cols-1 lg:grid-cols-4 gap-4">
                 {
                      peaks.map((item, index) => { 
                         return <div className="grid grid-cols-1 gap-4 p-4 border border-yellow-500 rounded-lg bg-b;ack/20 filter backdrop-blur-sm">
@@ -64,12 +64,12 @@ export function Peaks() {
                     })
                 }
             </div>
-            <div className="mt-6 grid grid-cols-2 gap-4 text-lg">
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-4 text-lg">
                 {peakMeanings.map((item) => {
                     return MeaningBlock(item)
                 })}
             </div>
-            <div className="mt-6 grid grid-cols-2 gap-4 text-lg">
+            <div className="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-4 text-lg">
                 {challengeMeanings.map((item) => {
                     return MeaningBlock(item, false)
                 })}

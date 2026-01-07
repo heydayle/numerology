@@ -5,6 +5,7 @@ import { getAdditudeMeaning } from "@/assets/MapAdditudeByLocales";
 import { getNameMeanings, getCharacterMeanings } from "@/assets/MapNumberOfNameByLocales";
 import { getPeaksByPeakNumbers } from "@/assets/MapPeakMeaningsByLocales";
 import { getChallengesByChallengeNumbers } from "@/assets/MapChallengeMeaningsByLocales";
+import { getCycleDateAndMeanings } from "@/assets/MapCycleYearAndMeaningsByLocales";
 
 type GeneralItemType = {
     index: number;
@@ -41,6 +42,7 @@ type KeyNumberContextType = {
     name: NameData
     peakMeanings: { title: number, description: string | number | undefined }[] | []
     challengeMeanings: { title: number, description: string | number | undefined }[] | []
+    cycleMeanings: { from: string, to: string, description: string, year: number, cycle: number }[]
 }
 
 type KeyNumberProviderProps = {
@@ -52,11 +54,12 @@ type KeyNumberProviderProps = {
     nameNumber: number;
     peakNumbers: number[];
     challengeNumbers: number[]
+    cycleNumber: number;
 }
 
 const KeyNumberContext = createContext<KeyNumberContextType | undefined>(undefined);
 
-export function KeyNumberProvider({ children, keyNumber, birthdayNumber, lifeAdtitudeNumber, vowelNumber, nameNumber, peakNumbers, challengeNumbers }: KeyNumberProviderProps) {
+export function KeyNumberProvider({ children, keyNumber, birthdayNumber, lifeAdtitudeNumber, vowelNumber, nameNumber, peakNumbers, challengeNumbers, cycleNumber }: KeyNumberProviderProps) {
     const locales = 'vi';
 
     const lifePathNumberInfor = getLifePathNumber(locales, keyNumber);
@@ -70,14 +73,16 @@ export function KeyNumberProvider({ children, keyNumber, birthdayNumber, lifeAdt
     }
     const peakMeanings = getPeaksByPeakNumbers(locales, peakNumbers);
     const challengeMeanings = getChallengesByChallengeNumbers(locales, challengeNumbers);
+    const cycleMeanings = getCycleDateAndMeanings(locales, cycleNumber)
 
     const data = {
         general: lifePathNumberInfor?.general || null,
         birthday: birthdayNumberInfor || null,
         additude: additudeNumberInfor || null,
         name: nameNumberInfor || null,
-        peakMeanings: peakMeanings,
-        challengeMeanings: challengeMeanings,
+        peakMeanings,
+        challengeMeanings,
+        cycleMeanings,
     }
     return (
         <KeyNumberContext.Provider value={data}>

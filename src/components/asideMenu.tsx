@@ -1,4 +1,4 @@
-import { ChartNoAxesColumn, Crown, FingerprintPattern, Move3D, Star, Flag } from "lucide-react"
+import { ChartNoAxesColumn, Crown, FingerprintPattern, Move3D, Star, Flag, Apple } from "lucide-react"
 
 import {
   Sidebar,
@@ -44,6 +44,11 @@ const items = [
     url: "#peaks-and-challenges",
     icon: Flag,
   },
+  {
+    title: "Nine-years cycle change",
+    url: "#cycle-nice-years",
+    icon: Apple,
+  }
 ]
 
 export function AppSidebar() {
@@ -60,9 +65,9 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url}>
+                    <a href={item.url} className="flex items-center">
                       <item.icon size={24}/>
-                      <span className="text-sm">{item.title}</span>
+                      <span className="text-[13px] mt-1">{item.title}</span>
                     </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
