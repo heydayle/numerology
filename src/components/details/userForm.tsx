@@ -10,11 +10,13 @@ import { useTranslation } from 'react-i18next';
 import { Calendar1 } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
 import { useEffect, useState } from 'react';
+import { useSteps } from '@/contexts/useSteps';
 
 export function UserForm() {
     const { t } = useTranslation();
     const { user, date, setDate, onChangeName, onSetBirthday } = useUser();
     const [inputDate, setInputDate] = useState("")
+    const { currentStep } = useSteps()
 
     useEffect(() => {
         if (!date) return
@@ -51,6 +53,12 @@ export function UserForm() {
         replacement: { d: /\d/, M: /\d/, y: /\d/ },
         showMask: true,
     });
+
+    const onKeydown = (event: KeyboardEvent) => {
+        if (event.key === 'Enter' && currentStep.canNextStep) {
+            currentStep.onNextStep?.(user)
+        }
+    }
     
     return (
         <div className='md:w-[500px] mx-auto'>
@@ -61,6 +69,7 @@ export function UserForm() {
                     onChange={(e) => onChangeName(e.target.value)}
                     placeholder={t("enter your name")}
                     className='h-12 text-xl p-2 my-4'
+                    onKeyDown={onKeydown}
                 />
                 <br />
                 <div className='pb-4'>
@@ -71,6 +80,7 @@ export function UserForm() {
                             placeholder='dd/MM/yyyy | ex: 24/11/1996'
                             value={inputDate}
                             onChange={onChangeDate}
+                            onKeyDown={onKeydown}
                         />
                         <Popover>
                             <PopoverTrigger>

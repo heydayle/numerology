@@ -30,7 +30,7 @@ const items = [
     icon: ChartNoAxesColumn,
   },
   {
-    title: "Birthday arrow meanings",
+    title: "Arrow meanings",
     url: "#birthday-arrow",
     icon: Move3D,
   },
@@ -45,7 +45,7 @@ const items = [
     icon: Flag,
   },
   {
-    title: "Nine-years cycle change",
+    title: "Nine-years cycle",
     url: "#cycle-nice-years",
     icon: Apple,
   }

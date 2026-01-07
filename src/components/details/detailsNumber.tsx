@@ -3,10 +3,10 @@ import { typeLifePathNumbersStrings, type GeneralItemType } from "@/assets/MapKe
 import { useUser } from "@/contexts/useUser";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
-import CountUp from "../bits/CountUp";
 import { BlockDetail } from "../blockDetail";
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { Button } from "../ui/button";
+import BlurText from "../bits/BlurText"
 
 export function DetailsNumber() {
     const { t } = useTranslation();
@@ -40,7 +40,11 @@ export function DetailsNumber() {
                 </div>
                 
                 <div className="mt-2 text-8xl font-extrabold text-yellow-400">
-                    <CountUp from={100} to={mainNumber} direction="up"/>
+                    <BlurText
+                        text={mainNumber.toString()}
+                        delay={150}
+                        className="justify-center"
+                    />
                 </div>
                 <div className="mt-4 border-b border-dashed border-yellow-400 w-24 mx-auto"></div>
             </div>
