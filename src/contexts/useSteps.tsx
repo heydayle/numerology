@@ -3,7 +3,7 @@ import { createContext, useContext, type ReactNode, useState, useMemo, useCallba
 import { useUser, type User } from './useUser';
 import { InformationOfNumber } from '@/components/details/InformationOfNumber';
 import { useTranslation } from 'react-i18next';
-import { useLocation, useHref, useSearchParams } from 'react-router';
+import { useSearchParams } from 'react-router';
 import { copyToClipboard } from '@/utils/helper';
 import { toast } from "sonner"
 
