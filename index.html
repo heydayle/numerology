@@ -1,13 +1,60 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="vi" class="dark">
   <head>
+    <!-- Basic -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Numberology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Title SEO (≤ 60 ký tự) -->
+    <title>
+      Numberology – Ứng dụng xem Thần Số Học cá nhân chính xác
+    </title>
+
+    <!-- Meta Description (≤ 160 ký tự) -->
+    <meta
+      name="description"
+      content="Numberology là ứng dụng web giúp bạn xem Thần Số Học cá nhân dựa trên ngày sinh, phân tích con số chủ đạo, đường đời và ý nghĩa cuộc sống."
+    />
+
+    <!-- Keywords (không quá quan trọng nhưng vẫn có ích) -->
+    <meta
+      name="keywords"
+      content="thần số học, numerology, xem thần số học, số chủ đạo, đường đời, phân tích ngày sinh"
+    />
+
+    <!-- Open Graph (Facebook, Zalo, LinkedIn) -->
+    <meta property="og:title" content="Numberology – Ứng dụng xem Thần Số Học cá nhân" />
+    <meta
+      property="og:description"
+      content="Khám phá con số chủ đạo, đường đời và ý nghĩa cuộc sống của bạn thông qua Thần Số Học."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/thumbnail.png" />
+    <meta property="og:locale" content="vi_VN" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Numberology – Ứng dụng Thần Số Học" />
+    <meta
+      name="twitter:description"
+      content="Xem và phân tích Thần Số Học cá nhân dựa trên ngày sinh."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://numerology-plum.vercel.app" />
   </head>
+
   <body>
+    <noscript>
+      Ứng dụng Numberology cần bật JavaScript để hoạt động.
+    </noscript>
+
     <div id="root"></div>
+
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
