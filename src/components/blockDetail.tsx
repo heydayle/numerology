@@ -18,7 +18,7 @@ export function BlockDetail({ type, style, title, description, isLoading, classN
         return title && parse(title)
     }
 
-    const classNameBind = cn('px-4 py-6 bg-neutral-900/20 border border-neutral-900 filter backdrop-blur-sm rounded-lg shadow-md', [className])
+    const classNameBind = cn('px-4 py-6 bg-neutral-900 border border-neutral-900 filter backdrop-blur-sm rounded-lg shadow-md', [className])
     return (
         <div key={type} className={classNameBind}>
             {title && (<><h3 className={`text-2xl font-semibold mb-4 whitespace-pre-line ${style}`}>
@@ -29,11 +29,11 @@ export function BlockDetail({ type, style, title, description, isLoading, classN
                 {isLoading 
                 ? (
                     <div className="flex flex-col gap-3">
-                        <Skeleton className="h-[10px] w-full rounded-full" />
-                        <Skeleton className="h-[10px] w-full rounded-full" />
-                        <Skeleton className="h-[10px] w-full rounded-full" />
-                        <Skeleton className="h-[10px] w-1/2 rounded-full" />
-                        <Skeleton className="h-[10px] w-1/3 rounded-full" />
+                        <Skeleton className="h-2.5 w-full rounded-full" />
+                        <Skeleton className="h-2.5 w-full rounded-full" />
+                        <Skeleton className="h-2.5 w-full rounded-full" />
+                        <Skeleton className="h-2.5 w-1/2 rounded-full" />
+                        <Skeleton className="h-2.5 w-1/3 rounded-full" />
                     </div>
                 )
                 :  <p className="whitespace-pre-line">{description}</p>

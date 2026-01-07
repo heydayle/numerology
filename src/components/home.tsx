@@ -11,7 +11,7 @@ export function Home() {
     const { user } = useUser();
 
     return (
-        <div className='p-6 max-w-300 mx-auto relative font-mono'>
+        <div className='p-6 pt-0 max-w-300 mx-auto relative font-mono'>
             <div className="sticky top-0 z-10 flex justify-between p-4 bg-black/20 filter backdrop-blur-sm">
                 <h1 className='text-center text-2xl font-bold'>{t("numberology")}</h1>
                 {step === STEPS.Result && 
