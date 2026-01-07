@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef, ReactNode } from 'react';
-import { motion, HTMLMotionProps } from 'motion/react';
+import { useEffect, useState, useRef } from 'react';
+import { motion, type HTMLMotionProps } from 'motion/react';
 
 const styles = {
   wrapper: {

@@ -1,7 +1,6 @@
 import { Skeleton } from "./ui/skeleton";
 import { cn } from "@/lib/utils";
 import parse from 'html-react-parser';
-import DecryptedText from "./bits/DecryptedText";
 
 type BlockDetailProps = {
     type: string;
