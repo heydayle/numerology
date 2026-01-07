@@ -1,9 +1,11 @@
 import { UserForm } from '@/components/details/userForm';
-import { createContext, useContext, type ReactNode, useState, useMemo, useCallback } from 'react';
+import { createContext, useContext, type ReactNode, useState, useMemo, useCallback, useEffect } from 'react';
 import { useUser, type User } from './useUser';
 import { InformationOfNumber } from '@/components/details/InformationOfNumber';
 import { useTranslation } from 'react-i18next';
-import { useSearchParams } from 'react-router';
+import { useLocation, useHref, useSearchParams } from 'react-router';
+import { copyToClipboard } from '@/utils/helper';
+import { toast } from "sonner"
 
 export const STEPS = Object.freeze({
     InputForm: 'InputForm',
@@ -23,15 +25,16 @@ interface StepsContextType {
     setStep: (step: Step) => void
     currentStep: CurrentStep
     renew: () => void
+    share: () => void
 }
 
 const StepsContext = createContext<StepsContextType | undefined>(undefined);
 
 export function StepsProvider({ children }: { children: ReactNode }) {
     const { t } = useTranslation();
-    const [_, setSearchParams] = useSearchParams();
+    const [searchParams, setSearchParams] = useSearchParams();
     const [step, setStep] = useState<Step>(STEPS.InputForm)
-    const { mainNumber } = useUser();
+    const { mainNumber, user } = useUser();
 
     const renew = useCallback(() => {
         if (step !== STEPS.InputForm) {
@@ -70,8 +73,30 @@ export function StepsProvider({ children }: { children: ReactNode }) {
         }
     }, [step, mainNumber])
 
+    const share = useCallback(async () => {
+        const link = new URL(window.location.href)
+        link.searchParams.append('shared', '1')
+        const response = await copyToClipboard(link.href)
+        if (response) {
+            toast.success('Ready to share!')
+        } else {
+            toast.error('Copy fail!')
+        }
+    }, [step, searchParams])
+
+    const initByShared = () => {
+        const shared = searchParams.get('shared');
+        if (shared === '1') {
+            nextToResult(user)
+        }
+    }
+
+    useEffect(() => {
+        initByShared()
+    }, [user])
+
     return (
-        <StepsContext.Provider value={{ step, setStep, currentStep, renew }}>
+        <StepsContext.Provider value={{ step, setStep, currentStep, renew, share }}>
             {children}
         </StepsContext.Provider>
     );
