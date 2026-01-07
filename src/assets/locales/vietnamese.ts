@@ -555,8 +555,8 @@ Trẻ em có Mũi tên trống 3-6-9 được tác giả David A. Phillip khuyê
   321: [
     {
       title: `(+) MŨI TÊN KẾ HOẠCH`,
-      description: `- Bạn có MŨI TÊN KẾ HOẠCH 1-2-3 trong BIỂU ĐỒ NGÀY SINH rất thích trật tự đâu ra đó, có phương pháp thực hiện, có thấu hiểu vấn đề. Nhưng bạn thường đặt mình vào vị trí “người tổ chức” hơn là “người thực hiện” các chi tiết. Những bạn này thường chỉ lên kế hoạch tổng thể, ít khi nào đi vào trong chi tiết thực hiện. Ngoại trừ bạn có MŨI TÊN THỰC TẾ 1-4-7, hoặc khi bạn có CON SỐ CHỦ ĐẠO là số 4, 7 , 10, 22/4 (khi bạn cộng tất cả con số trong ngày tháng năm sinh dương lịch lại ; ví dụ mình: 29/7/1990=2+9+7+1+9+9=37=10 ); thì bạn mới chịu khó đi để ý những chi tiết nhỏ nhỏ ở trong lộ trình mình đi.
-- Với bạn có mũi tên này này phải khắc phục tính lười nhẹ nhẹ của mình. Theo bác David A. Phillips viết. Khi bạn có khả năng lập kế hoạch này thường hay làm biếng, đặc biệt khi bạn giao hết dự án này dự án kia cho mọi người mà quên đi theo kiểm soát, thì các bạn sẽ không có một kế hoạch được đi theo một cách tốt đẹp. Bởi bạn thấy chi tiết nhỏ nhỏ vậy ko cần để ý, nhưng bạn cần hiểu nhiều chi tiết nhỏ đó tạo thành lớn.
+      description: `- Bạn có MŨI TÊN KẾ HOẠCH 1-2-3 trong BIỂU ĐỒ NGÀY SINH rất thích trật tự đâu ra đó, có phương pháp thực hiện, có thấu hiểu vấn đề.\nNhưng bạn thường đặt mình vào vị trí “người tổ chức” hơn là “người thực hiện” các chi tiết. Những bạn này thường chỉ lên kế hoạch tổng thể, ít khi nào đi vào trong chi tiết thực hiện.\nNgoại trừ bạn có MŨI TÊN THỰC TẾ 1-4-7, hoặc khi bạn có CON SỐ CHỦ ĐẠO là số 4, 7, 10, 22/4 (khi bạn cộng tất cả con số trong ngày tháng năm sinh dương lịch lại; ví dụ mình: 29/7/1990=2+9+7+1+9+9=37=10); thì bạn mới chịu khó đi để ý những chi tiết nhỏ nhỏ ở trong lộ trình mình đi.\n
+- Với bạn có mũi tên này này phải khắc phục tính lười nhẹ nhẹ của mình. Theo bác David A. Phillips viết. Khi bạn có khả năng lập kế hoạch này thường hay làm biếng, đặc biệt khi bạn giao hết dự án này dự án kia cho mọi người mà quên đi theo kiểm soát, thì các bạn sẽ không có một kế hoạch được đi theo một cách tốt đẹp. Bởi bạn thấy chi tiết nhỏ nhỏ vậy ko cần để ý, nhưng bạn cần hiểu nhiều chi tiết nhỏ đó tạo thành lớn.\n
 - Những bạn có MŨI TÊN KẾ HOẠCH trong BIỂU ĐỒ NGÀY SINH này, có khả năng làm việc ở khâu nhân sự trong các công ty. Là những nhà tổ chức, ví dụ như công ty tổ chức event, tiệc cưới….`,
     },
     {
@@ -664,4 +664,163 @@ export const character_number_meaning_map = new Map<number, string>([
   [7, "Phân tích, hiểu biết, kiến thức, nhận thức, cẩn trọng, suy ngẫm"],
   [8, "Nỗ lực thực tiễn, quan tâm địa vị, tìm kiếm quyền lực, mục tiêu vật chất"],
   [9, "Nhân văn, rộng lượng, vị tha, bổn phận, diễn đạt sáng tạo"],
+])
+
+export const peaks_meaning_map = new Map<number, string>([
+  [1, `Có tính thực tế mãnh liệt. Đây là giai đoạn thể hiển cá nhân cao, sống rất độc lập. Nếu như sự tiến hóa tâm linh họ càng cao thì khi xuất hiện sẽ là giai đoạn giúp cho con số chủ đạo và tính cách trong biểu đồ ngày sinh thể hiện rõ nét.
+
+Con số này chỉ được nhìn thấy ở đỉnh của hai kim tự tháp đầu tiên. Khi sang Kim tự tháp thứ ba và thứ tư nó sẽ trở thành số 10. Số 1 là số vô cùng thực tế báo hiệu giai đoạn của những nỗ lực cá nhân. Trong hầu hết các trường hợp,  nó cho thấy sự tách rời khỏi những mối liên hệ mà trong đó có sự thiếu hòa hợp, cản trở quá trình phát triển cá nhân của chúng ta, chẳng hạn như một cuộc hôn nhân kém hạnh phúc, quan hệ làm ăn buôn bán không hiệu quả, hoặc những mối dây tình cảm rối rắm đã làm vướng chân chúng ta nhiều năm. Bạn có thể tin rằng không có cuộc hôn nhân hay mối quan hệ nào là xấu, trừ khi đó là một phần bài học của bạn, được đưa vào cuộc đời bạn để phục vụ cho lợi ích của chính bạn. Một số người sẽ chọn cách cố gắng hết sức để tránh các cuộc chia ly này, cố gắng giữ nguyên hiện trạng bằng mọi giá. Mặc dù vậy, họ cũng sẽ nhận ra một vài thay đổi trong bản chất mối quan hệ, bởi vì đến thời điểm này họ đã bắt đầu thể hiện cá tính của mình một cách mạnh mẽ hơn, cũng trở nên rõ ràng hơn trong quan điểm, trong cách biểu đạt ý kiến của mình. Điều đó có nghĩa là từ giai đoạn này trở đi những mối quan hệ khiên bạn tổn thương mà bạn muốn dứt mãi không được sẽ dứt, còn những mối quan hệ không đứt gãy trong giai đoạn này sẽ chuyển sang một trạng thái mới dễ chịu hơn.
+
+Nếu họ càng già dặn về mặt tâm hồn thì từ thời điểm này về sau họ càng thể hiện rõ khí chất cá nhân hơn. Hướng hoạt động của họ thường gắn chặt với những gì được thể hiện qua con số chủ đạo và cả sức mạnh của những con số, những mũi tên trong biểu đồ ngày sinh của họ.`],
+  [2, `Giai đoạn giá trị tinh thần rất mạnh mẽ, một giai đoạn có lối sống tinh tế bằng sự trưởng thành của trực giác và cảm xúc. Nếu cân bằng cảm xúc tốt là giai đoạn trực giác phát triển. Vấn đề vật chất không phải giai đoạn ưu tiên phát triển.
+
+Con số này cho thấy một giai đoạn mà trong đó những giá trị tinh thần hoặc giá trị tâm linh bắt đầu hé mở. Lối sống và những thói quen trong cuộc sống sẽ từ từ mang màu sắc của trực giác hoặc trở nên giàu cảm xúc hơn. Tuy nhiên cần lưu ý rằng giá trị tinh thần hoặc tâm linh sẽ thể hiện dưới dạng tích cực (tức hình thức tăng cường nhận thức một cách tốt đẹp hơn) hay dưới dạng tiêu cực (kiểu phản ứng không tốt hoặc gây hấn), tùy vào mức độ trưởng thành mà con người đã đạt đến thời điểm này. Hiển nhiên, khả năng trực giác của một người không thể phát triển nếu họ bị cột chặt vào những phản ứng cảm xúc mang tính bản năng.
+
+Đây cũng là giai đoạn chúng ta làm việc rất chăm chỉ và tiến triển khá chậm  về mặt vật chất vì chúng ta không thể có cả hai thứ cùng lúc được. Hãy nhớ rằng mọi việc đều có thời điểm thích hợp của nó, một trong những ứng dụng của Nhân số học là tìm hiểu nhu cầu của bản thân, cũng như cách thức và thời điểm thích hợp để chúng ta xử lý những nhu cầu này. Nếu khăng khăng đi tìm thành tựu trong giai đoạn ảnh hưởng của đỉnh cao mang số 2 bạn sẽ chỉ tạo ra sự uất giận, mâu thuẫn và sự tuột dốc năng lượng mà thôi. Hãy kiên nhẫn, khi cuộc đời gieo cho bạn con số 2 ở một trong những đỉnh kim tự tháp bạn cần hiểu rằng thời gian đó nên tập trung vào việc phát triển tinh thần. Sau đó, ở những đỉnh tháp tiếp theo bạn sẽ được đến bù xứng đáng.`],
+  [3, `Giai đoạn thông tuệ và khai trí, giai đoạn mở rộng hiểu biết, phát triển trí tuệ. Nhiều người tìm thấy sự thôi thúc đi du lịch để khám phát và mở rộng tâm trí, nâng cao tầm nhìn.
+
+Con số này cho thấy bạn nên chú trọng học hỏi để mở mang trí tuệ. Đây là giai đoạn quan trọng để học hỏi đánh giá và phân tích. Một số người sẽ cảm thấy thôi thúc muốn đi đó đi đây dưới sóng rung của con số này. Ở giai đoạn này của cuộc đời họ, việc đi đó đi đây không chỉ là du lịch đơn thuần mà còn là cách để họ học hỏi và mở mang tầm mắt, mở mang kiến thức. Trong giai đoạn này hãy để trí não được mở mang theo chiều hướng tích cực. Nếu không bạn sẽ có nguy cơ trở thành kẻ hay chỉ trích người khác, đòi hỏi, yêu sách và không có gì ngạc nhiên khi hậu quả là bạn sẽ không được người khác chào đón.`],
+  [4, `Giai đoạn mang đến cho bạn cơ hội tăng trưởng về đời sống vật chất. Đời sống vật chất phụ thuộc mức độ trưởng thành và con số chủ đạo của bạn. Nếu làm cố gắng giai đoạn này bạn sẽ đạt giá trị vật chất cao nhất.
+
+Đỉnh cao mang số 4 con số này dự báo sự gia tăng sức mạnh vật chất. Điều đó có thể được thể hiện theo nhiều cách khác nhau, tùy theo mức độ trưởng thành, con số chủ đạo và các yếu tố trong Biểu đồ này sinh. Đối với những người sẵn sàng, làm việc siêng năng chăm chỉ đây là giai đoạn họ gặt hái thành công nhờ ảnh hưởng của sóng rung số 4. Đối với những người cần có thêm kiến thức về việc sử dụng tốt hơn các giác quan của mình để trở nên trưởng thành và những ai sẵn sàng dấn thân vào những công việc thực tế, thì đây cũng là giai đoạn mà những nỗ lực của họ được tưởng thưởng. Nhưng với những người quá tham vọng, hám danh lợi và tham lam thì đây là giai đoạn họ mất nhiều hơn được. Cho dù họ có nỗ lực nhiều hơn thì họ cũng không có được tiến triển đáng kể nếu động cơ của họ quá vị kỷ và tư lợi. Điều này có thể gây áp lực nặng nề lên hệ thống thần kinh cũng như tình trạng sức khỏe của họ nói chung, nó chỉ được cải thiện khi họ nhìn ra và điều chỉnh lại động cơ của mình.`],
+  [5, `Giai đoạn phát triển tâm linh và sự chuyển hóa trong tâm trí. Giai đoạn đạt sự hiểu biết chính mình và vũ trụ này, giai đoạn tiến hóa mới. Khi trực giác phát triển thì cảm xúc được cân bằng, giai đoạn đạt được sự tự do trong tâm.
+
+Con số này thường cho thấy giai đoạn đỉnh cao này chủ yếu liên quan đến trạng thái cảm xúc. Nếu đi đúng quỹ đạo phát triển thì người ta sẽ bắt đầu có sự phát triển tâm linh và thấu hiểu cuộc sống sâu sắc hơn, từ đó lại sự tự do cá nhân mạnh mẽ hơn. Trong giai đoạn này đời sống tinh thần của chúng ta gặp phải nhiều áp lực vượt mức chịu đựng để tạo điều kiện cho chúng ta mài giũa khả năng kiểm soát cao hơn. Điều này giúp chúng ta giảm các phản ứng mang tính bản năng đối với những con người và tình huống xung quanh. Kết quả là sự tự do cá nhân của chúng ta được nâng cao, dọn đường cho một tầng nhận thức tâm linh cao hơn. Những người từng lo lắng về sự vững vàng tài chính trong những năm trước đó giờ đây có thể bớt âu lo nhờ có cái nhìn cân bằng hơn về nhu cầu thật sự của mình và những tác động từ môi trường.`],
+  [6, `Giai đoạn phát triển mạnh mẽ của não phải, kích hoạt sự sáng tạo, hãy lắng nghe chính mình để đón nhận thông điệp và sứ mệnh lớn. Giai đoạn dành cho gia đình, động lực sáng tạo mới. Giai đoạn này cần rèn tính kiên trì chuyển hóa các thử thách thành bài học.
+
+Số này mang đến sự phát triển mạnh mẽ về lực sáng tạo. Đây là giai đoạn mà các yếu tố cao nhất về mặt tinh thần và trí não hợp lại để hé lộ cho chúng ta thấy vai trò thiết yếu của chúng ta trong kế hoạch vô hạn của tạo hóa không phải ai cũng có được nhận thức này mà chỉ những người trưởng thành hơn, có mức độ tiến hóa cao hơn mới cảm nhận rõ. Đối với đa số mọi người những người coi trọng giá trị vật chất, đây sẽ là giai đoạn gắn bó mật thiết với gia đình hoặc nếu họ còn độc thân thì đây là lúc họ khao khát một mái ấm bình yên. Các khuynh hướng lo lắng về mái ấm gia đình hoặc vội vã kết hôn sẽ khiến người ta dễ phạm sai lầm vào lúc này, gây ra nhiều bài học tổn thương khi con người để cho cảm xúc thống trị các mối quan hệ của mình. Sự khôn ngoan và kiên nhẫn sẽ giúp chúng ta tránh được những sai lầm này.`],
+  [7, `Giai đoạn có sự thay đổi đáng ngạc nhiên trong cuộc sống. Với những trải nghiệm đã có, đây là giai đoạn của sự trưởng thành để chia sẻ và có thêm trải nghiệm mới đáng giá. Nếu chưa đủ trưởng thành thì chuẩn bị giai đoạn mới, trân quý những trải nghiệm đáng.
+
+Con số này có thể đem đến rất nhiều sự thay đổi đáng kinh ngạc trong đời sống của con người. Đây là giai đoạn mà chúng ta được thôi thúc chia sẻ tất cả những gì chúng ta học được từ trước đến giờ. Khi làm vậy chúng ta sẽ có được sự tiến bộ vô cùng to lớn trong việc tự khám phá những giá trị tiềm ẩn của bản thân, vì không có cách học tốt hơn cách học thông qua việc truyền đạt, hướng dẫn người khác.
+
+Giai đoạn này mang đậm tính trải nghiệm thực tế đòi hỏi bạn trải qua khá nhiều bài học đầy thử thách, nếu thành công bạn đương nhiên sẽ đủ vững vàng và có đủ chất liệu để hướng dẫn người khác, còn nếu không đủ trưởng thành để vượt qua những bài thi này chúng ta sẽ mất nhiều thời gian để ôn lại bài và thi lại. Hầu hết của những người đang chịu sóng rung số 7 ở giai đoạn này sẽ thôi thúc hay cơ duyên để giảng dạy hay truyền đạt một điều gì đó, nhưng không nhất thiết phải là một lĩnh vực học thuật. Thông thường, sự giảng dạy này sẽ liên quan đến sự tiến hóa của con người như Yoga, phương pháp trị liệu tự nhiên, các hướng phát triển khả năng nghệ thuật hoặc nhận thức tâm linh.`],
+  [8, `Tính độc lập mạnh mẽ, linh hồn trưởng thành. Bạn sẽ đạt sự thành công về tài chính, nếu có con số chủ đạo là con số chẵn, thành công về sự sáng tạo nếu số chủ đạo là con số lẻ. Cẩn trọng khi sử dụng, biết buông bỏ và tách mình để đạt sự tự do trong tâm, hạn chế các năng lượng đối lập.
+
+Con số này cho thấy đây là giai đoạn rất có sức bậc, với nguồn lực chủ đạo là sức mạnh của sự độc lập. Tùy theo con số chủ đạo của mỗi người mà sức mạnh độc lập này sẽ được phát triển thông qua lĩnh vực nghệ thuật hoặc thương mại. Nếu có con số chủ đạo là số chẵn bạn có khuynh hướng thành công về mặt tài chính khi hoạt động độc lập, nếu có con số chủ đạo là lẻ bạn có khả năng thành công về mặt nghệ thuật hay nhân văn trong khi hoạt động độc lập. Tuy nhiên hãy có ý thức sử dụng sức mạnh của sóng rung số 8 một cách tích cực, đừng để sự đấu đá cá nhân hoặc quan điểm hạn hẹp cản trở sự lan tỏa của sóng rung này. Nếu để cho các tác nhân ấy ảnh hưởng, bạn sẽ rơi vào tình trạng xa cách với môi trường xung quanh – một nỗ lực “giãy giụa” để tỏ ra độc lập.`],
+  [9, `Giai đoạn hoạt động nhân đạo và phụng sự, đời sống tinh thần phát triển mạnh mẽ. Trưởng thành trong việc nhận định nhu cầu người khác. Mọi người tin tưởng và cần sự giúp đỡ người khác.`],
+  [10, `Sự trưởng thành cực điểm, năng lượng hội tụ cực mạnh, trải nghiệm đủ đầy. Người khác rất cần sự tỉnh thức và dẫn lối của bạn. 'Người dám cho đi' nhận những sứ mệnh cống hiến vĩ đại.
+
+Số 10 chỉ xuất hiện ở đỉnh cao thứ 3 và thứ 4, khi mà họ đã trải qua các bài học lên bờ xuống ruộng, đây là thời điểm mà họ sử dụng sức mạnh của họ đã tích lũy trong thời gian qua để đi giúp người, lắng nghe nhu cầu thay đổi của người khác để thay đổi cuộc sống một cách tốt đẹp hơn, nói đơn giản thì số 10 nghĩa là giúp thay đổi về mặt cuộc sống, tinh thần, nhận thức.`],
+  [11, `Mang lại ánh sáng cho thế giới, giai đoạn trưởng thành về tâm linh, thực hành thiền, rải tâm từ. Khả năng trực giác cao khi tu sửa và gạt bỏ cái tôi. Truyền cảm hứng, nâng tầm xứng đáng cho những cống hiến, tạo sức ảnh hưởng. Làm sạch chính mình để cộng hưởng nhưng rung động vũ trụ. Đón nhận sứ mệnh lớn.`]
+])
+
+export const challenge_meaning_map = new Map<number, string>([
+  [0, `CON SỐ CỦA VÔ CỰC, LÀ TẤT CẢ MỌI THỨ VÀ CŨNG KHÔNG LÀ GÌ CẢ.
+
+ Số 0 mang một nguồn năng lượng mạnh mẽ.
+ Là con số khởi đầu, hành trình tìm về tâm linh. Cũng mang ý nghĩa trống rỗng, hỗn loạn, kết thúc, tiêu cực, thù hận, tiêu hủy.
+ Là cách nhìn đóng lại và cũng có nghĩa là mở rộng ra, là cách nhìn trọn vẹn, toàn diện, vĩnh cửu và tồn tại mãi mãi.
+
+ Đại diện cho tất cả những gì hiện có và bao gồm tất cả những tiềm năng, bao gồm tất cả những con số khác.
+
+Khi gặp đỉnh số 0: Bạn có thể gặp 1 thử thách hoặc là nhiều thử thách trong cùng lúc và chúng ta sẽ không biết rõ thử thách của mình là con số trong các con số (từ 1 đến 9). Cũng có thể Bạn sẽ có nhiều bài học mang nhiều con số thử thách khác nhau đến cùng 1 lúc.
+ 
+Nếu bạn mang con số 0 thì ở trong mình đã có sẵn tiềm tàng điều gì đó, có một sức mạnh từ con số 0. Việc cần làm là sử dụng nguồn năng lượng tích cực ấy để xử lý những rắc rối, những bài học để đạt được thành công.`],
+  [1, `NGƯỜI DẪN ĐẦU, NGƯỜI LÃNH ĐẠO, NGƯỜI TIÊN PHONG, CON SỐ TRÍ TUỆ, ÁNH SÁNG, MẶT TRỜI
+
+ Tự lập, sống mạnh mẽ, can đảm, đứng vững trên đôi chân của mình, lắng nghe tiếng nói từ bên trong của mình, lắng nghe trực giác đừng để mọi thứ xung quanh làm mình xao nhãng, mất tập trung để tìm ra phương hướng, tìm cách đi về phía trước.
+
+Đủ sức mạnh, đủ nghị lực để có được cuộc sống đầy đủ, trọn vẹn hơn như bạn mong muốn.
+
+Đây không phải là thời điểm mà Bạn đi tìm kiếm lời khuyên, lời động viên, an ủi hay cần một ai đó hiểu Bạn, chấp nhận Bạn. Thay vào đó hãy tin vào chính sức mạnh của mình.
+
+Dành thời gian cho riêng mình, tĩnh lặng, suy nghĩ những điều mình muốn làm, tạm thời tránh xa những người tiêu cực, những người cản trở, để tập trung cho chính mình. Từ đó hiểu rõ bản thân, hiểu những gì bạn muốn có trong cuộc đời.
+
+Là khoảng thời gian tìm lại chính mình, chấp nhận con người mình, xem những lỗi lầm, kinh nghiệm trước kia chính là những bài học mà nhờ đó giúp Bạn đứng dậy mạnh mẽ và đang bước đi trên con đường hoàn toàn đúng đắn.
+
+Là giai đoạn phát triển cá nhân, hãy nắm bắt cơ hội, hãy tập trung vào mục tiêu của mình. Lắng nghe được tiếng nói bên trong sẽ có được con đường, sẽ có sự chỉ dẫn để đi đến thành công.
+
+Tiếp cận được những điều mình chưa bao giờ làm trước đây, hãy trải nghiệm, hãy khám phá để tìm ra những hướng đi mới. Hãy áp dụng ý tưởng mới, tận dụng sức sáng tạo vô tận mà con số 1 mang lại cho Bạn.
+
+Sau đó bạn sẽ thấy được những lợi ích khác nhau, thông qua ý tưởng của mình từ đó trở thành ngọn đuốc soi đường cho bản thân và còn có thể giúp đỡ cho người khác.`],
+  [2, `ĐẠI DIỆN SỰ HỢP TÁC – KẾT HỢP, HÒA BÌNH, NGOẠI GIAO
+
+Khao khát những điều liên quan đến bình yên, hòa bình, không muốn tranh luận, tranh cãi hay gây rắc rối gì cả. 
+
+Đây là thử thách lớn, không dễ gì đạt được bài học này. Thách thức này là cả quãng đường chứ không phải là một giai đoạn cụ thể nào cả.
+Khi Bạn mang thử thách là con số 2 tức là bạn phải vượt qua chính bản thân mình, qua bản ngã, bớt cái tôi để lắng nghe, thấu hiểu, dịu dàng, ôn hòa trong cách cư xử từ đó giúp cho chính mình khả năng đàm phán, phân xử và kết giao và cân bằng tất cả mọi điều.
+
+Với bài học là số 2 sẽ giúp Bạn thay đổi được cảm xúc, biết cách cân bằng và giải quyết được những chất chứa bên trong để giải phóng nó ra để nhận về vui vẻ, hạnh phúc hơn.
+ 
+Khi Bạn bỏ đi quyền lợi riêng tư, hướng về mục đích chung, vì lợi ích chung. Người ta bắt đầu dịu lại, họ sẽ cùng bạn nắm tay đi về phía trước. Nếu Bạn vẫn giữ mong muốn về 1 cuộc sống bình yên, 1 thế giới hòa bình và mọi thứ đều hài hòa thì khi đó những người khác sẽ bắt đầu tiến tới bạn, giúp đỡ bạn để cùng tạo ra 1 thế giới như bạn mong muốn.
+
+Bạn sẽ là người mang đến nguồn năng lượng tích cực để có thể chứng minh được rằng bạn là người có chiều sâu, là sứ giả hòa bình, và mang giá trị đến cho người khác.
+
+Từ đó phát triển được chiều sâu, tâm linh của mình có cách nhìn cuộc sống hơn để sống một cuộc sống cân bằng và hạnh phúc.`],
+  [3, `THÔNG MINH, TRÍ TUỆ, SÁNG TẠO, CHẤT NGHỆ SĨ
+
+Đừng để tiêu cực cuốn Bạn đi, thay đổi môi trường, tránh xa những người tiêu cực. Hãy tận hưởng cuộc sống, có mặt ở hiện tại, hài lòng với những gì mình đang có.
+
+Lạc quan, yêu đời, giúp người khác có thêm động lực, thêm niềm tin, bình an hơn, cân bằng hơn.
+
+Tự làm bản thân mình vui, tích cực lan tỏa đến cho mọi người. Điều này sẽ giúp Bạn trở nên sáng tạo hơn trong việc giải quyết những rắc rối, mâu thuẫn đồng thời làm cho cuộc đời màu sắc hơn, thú vị hơn.
+
+Rèn luyện bản thân và tìm kiếm những người thầy, người Bạn giúp Bạn tạo ra giá trị cho cộng đồng nơi Bạn đến.`],
+  [4, `TỈ MỈ, GỌN GÀNG, KỶ LUẬT, THỰC TẾ, ÓC TỔ CHỨC
+
+ Kỷ luật, óc tổ chức, sắp xếp.
+Cần tìm hiểu để học hỏi nhiều hơn để phát triển nhận thức của mình cũng như tạo ra nền tảng vững chắc cho tương lai về sau.
+
+Cần tĩnh tâm, ổn định để thiết lập lại cuộc đời của mình. Tổ chức, sắp xếp cuộc sống và lên kế hoạch cho tương lai.
+
+Làm việc có quy trình, có phương pháp, tận tâm hoàn thành những gì mình đặt ra.
+
+Tự động viên, khích lệ mình. Chú ý các bài học, các trải nghiệm để nhận ra sự hướng dẫn cho con đường của bạn.`],
+  [5, `KHAO KHÁT TỰ DO, THÍCH KHÁM PHÁ, YÊU THÍCH TRẢI NGHIỆM
+
+Hay thay đổi. khao khát tự do.
+Mạnh mẽ bước đến con đường phát triển tự do bản thân mình, hãy mở rộng và trải nghiệm cuộc đời mình, đừng e sợ, đừng ngại ngùng, đây là giai đoạn khám phá cuộc sống, thoát ra khỏi những ràng buộc để bước ra ngoài thế giới.
+
+Là giai đoạn khởi đầu của những chuyến phiêu lưu mạo hiểm trong cuộc đời Bạn. Trải nghiệm những gì đơn giản thôi, đừng phức tạp hóa và hãy phiêu lưu cuộc đời theo cách mà Bạn cảm. Bạn hãy chấp nhận những rủi ro, những thử thách và xem nó như bài học mà Bạn phải vượt qua để khám phá được những điều thú vị trong cuộc sống.
+
+Linh động, thích nghi với môi trường và điều kiện sống, cần cân nhắc thấu đáo trước khi bắt tay vào làm thay vì để thói quen dẫn dắt. Hãy tìm kiếm những mục tiêu, lý tưởng, thành tựu mới trong cuộc đời của mình và hãy nhận biết rằng sẽ có vô vàn cách để giải quyết vấn đề, có thể tìm ra những phương hướng mới, định hướng mới cho cuộc đời của mình.
+
+Đừng suy nghĩ và ràng buộc mình bởi những quy tắc như thường lệ vì sẽ có những ngoại lệ cho bạn làm nên hãy cứ khám phá, hãy cứ trải nghiệm theo phương pháp mới, hình thức mới với sự cân nhắc kỹ lưỡng, thấu đáo.`],
+  [6, `CON SỐ CỦA TÌNH YÊU THƯƠNG, NHẸ NHÀNG.
+
+Quan tâm, chăm sóc người khác nhưng dễ bỏ bê bản thân dễ bị hụt hẫng vì những gì mình làm không được người khác coi trọng, công nhận.
+Chăm sóc ngôi nhà bên trong của Bạn, tâm hồn bên trong để giúp mình cân bằng, yêu thương bản thân đúng nghĩa, cân bằng được giữa thế giới bên ngoài và thế giới bên trong của mình.
+Hãy tập thể dục, ăn uống lành mạnh, suy nghĩ tích cực, tìm đến các môi trường cho mình những nguồn năng lượng tích cực, để mình có động lực và tiến lên, để cảm thấy yêu thương, vui vẻ.
+Hãy suy nghĩ thấu đáo và tử tế, rộng lượng, quan sát chiều sâu cảm xúc bên trong để nhận ra điều làm mình cảm thấy hạnh phúc nhất, vui vẻ nhất.
+
+Là giai đoạn mang đến cho Bạn những trách nhiệm mới, những bài học mới mà Bạn phải đối diện trong cuộc sống.
+
+Bài học cuộc sống là bài học về tình yêu, về những mối quan hệ, cách cư xử và làm bạn với chính bản thân mình. Từ đó hoàn thiện và phát triển bản thân, sự nhận thức để vượt qua bài học này.
+
+Dùng sự nhẹ nhàng, tình yêu thương, tinh tế, khôn ngoan của mình để giải quyết những vấn đề tồn tại từ trước đây hoặc đang đối diện, giúp bạn điều chỉnh lại cuộc sống, cân bằng lại mọi thứ trong cuộc sống.
+
+Bạn còn có thể gặp những điều liên quan đến mối quan hệ như chia tay, rạn nứt, chấm dứt mối quan hệ trong giai đoạn này.
+
+Đừng để những nỗi buồn, tiêu cực kéo bạn xuống. Đẩy những năng lượng tiêu cực ra bên ngoài và hấp thu năng lượng tích cực từ việc đón nhận lời khuyên từ những người thầy hiền trí, ở bên cạnh bạn bè năng động, cùng chí hướng, đọc những cuốn sách hay... để từ đó Bạn có thêm những bài học mới, những kinh nghiệm mới, giá trị tích cực.
+
+Khi đó, Bạn sẽ có sức mạnh từ nguồn năng lượng đặc biệt để mình vừa hoàn thành bài học vừa đạt được đỉnh cao của mình. Cuộc sống của bạn sẽ hạnh phúc hơn, bình yên hơn.`],
+  [7, `KHÔN NGOAN, HIỂU BIẾT VÀ CÓ KIẾN THỨC RẤT SÂU RỘNG TRONG NHỮNG LĨNH VỰC HỌ QUAN TÂM.
+
+Con số của sự khôn ngoan, đức tin, tin tưởng vào sức mạnh của bản thân mình, tin tưởng vào người khác và những ơn trên.
+Chiếc cầu nối giữa thế giới bên trong và thế giới bên ngoài, nguồn năng lượng đặc biệt, thế giới cơ bản – nâng cao.
+Là thời gian mà Bạn tìm kiếm ý nghĩa, giá trị cuộc đời của mình và phải nghĩ đến những kế hoạch trong tương lai.
+Đây là thử thách đòi hỏi kết nối giữa thế giới bên ngoài và thế giới bên trong của Bạn.
+
+Tách xa thế giới ồn ào bên ngoài để đi tìm kiếm những gì bên trong, tìm kiếm những điều khiến bạn thấy bình yên và vui vẻ hơn.
+
+Thế giới bên trong phải đủ tĩnh lặng, tập trung vào bên trong, đi sâu vào trong linh hồn, đi sâu vào những gì đang tìm kiếm và đang hướng về. Khi đã tìm thấy hãy hướng về nó, soi mình về bên trong.
+
+Cần sự riêng tư, cần khoảng thời gian để tĩnh tâm suy nghĩ, những điều bí mật, chiêm nghiệm, trải nghiệm cho riêng mình nên giai đoạn này có thể bạn sẽ cảm thấy mình cô đơn, tách biệt khỏi đám đông, xã hội.
+
+Hãy là người quan sát, học hỏi từ những trải nghiệm của mình trước những thử thách này và khi đó hãy chia sẻ những điều mình đã học được, những điều mình đã khám phá để chia sẻ cho những người khác. Một khi đã tìm kiếm được điều gì đó thì điều đó sẽ tồn tại mãi mãi. Bạn sẽ có được điều đích thực của cuộc đời mình và cảm thấy cuộc sống vô cùng ý nghĩa và hạnh phúc.
+
+Bạn rất tỏa sáng ở những con đường phía sau, bạn có thể là những bậc thầy để đi truyền đạt, chia sẻ lại những kinh nghiệm, trải nghiệm quý báu của mình cho những người khác.`],
+  [8, `SỨC MẠNH, QUYỀN LỰC, LUẬT NHÂN QUẢ, LUẬT QUẢ BÁO
+
+ Cân bằng giữa thế giới vật chất và thế giới tâm linh nên khi tạo ra thành tựu về vật chất sẽ dễ dàng kết nối với tâm linh vì khi Bạn có vật chất nó như là một điểm tiếp nối, 1 nhịp cầu kết nối với tầng tâm linh.
+ Cân bằng thân, tâm và trí.
+Bạn cần cân bằng lại mọi lĩnh vực trong cuộc sống: nội tâm, tâm trí đến mọi mục tiêu, mọi khía cạnh, mọi thành tựu trong cuộc sống của bạn đặc biệt là khi cảm thấy cuộc sống bất ổn thì cách tốt nhất là cân bằng lại cuộc sống.
+
+Số 8 cũng tạo ra những luật lệ, những quy tắc, sức mạnh của quyền lực nên giai đoạn này cần phải tuân thủ, phải quan sát, không để bản thân đi quá giới hạn cho phép. Hướng bạn về công bằng, công lý không chỉ cho riêng bạn mà đến với cả những người xung quanh.
+
+Đối với đồng tiền cần phải có cái nhìn đúng đắn về giá trị thật sự của đồng tiền, tránh để thế giới vật chất kéo bạn đi quá xa trục thể chất và linh hồn.
+
+Nắm quyền kiểm soát trong thế giới vật chất, giúp đỡ người khác, biết giá trị cuộc sống, nhân từ, cho đi để nhận sự trợ giúp của các thiên thần hộ mệnh.
+
+Quan tâm, chăm sóc bản thân như cách mà Bạn đối với người khác. Hiểu rõ, cảm thông và hiểu sâu sắc về bản thân về nhân quả, suy nghĩ thật kỹ trước khi bạn hành động.`],
 ])

@@ -8,7 +8,7 @@ import { AppSidebar } from "../asideMenu";
 import { Peaks } from "./peaks";
 
 export function InformationOfNumber() {
-    const { mainNumber, birthdayNumber, lifeAdtitudeNumber, vowelNumber, numberOfName } = useUser();
+    const { mainNumber, birthdayNumber, lifeAdtitudeNumber, vowelNumber, numberOfName, peakNumbers, challengeNumbers } = useUser();
 
     return (
         <>
@@ -19,6 +19,8 @@ export function InformationOfNumber() {
                 lifeAdtitudeNumber={lifeAdtitudeNumber}
                 vowelNumber={vowelNumber}
                 nameNumber={numberOfName}
+                peakNumbers={peakNumbers}
+                challengeNumbers={challengeNumbers}
             >   
                 <DetailsNumber />
                 <hr className="my-4"/>

@@ -3,6 +3,8 @@ import { getLifePathNumber } from "@/assets/MapKeyNumberByLocales";
 import { getBirthdayMeaning } from "@/assets/MapNumberOfBirthdayByLocales";
 import { getAdditudeMeaning } from "@/assets/MapAdditudeByLocales";
 import { getNameMeanings, getCharacterMeanings } from "@/assets/MapNumberOfNameByLocales";
+import { getPeaksByPeakNumbers } from "@/assets/MapPeakMeaningsByLocales";
+import { getChallengesByChallengeNumbers } from "@/assets/MapChallengeMeaningsByLocales";
 
 type GeneralItemType = {
     index: number;
@@ -37,6 +39,8 @@ type KeyNumberContextType = {
     birthday: string | null
     additude: string | null
     name: NameData
+    peakMeanings: { title: number, description: string | number | undefined }[] | []
+    challengeMeanings: { title: number, description: string | number | undefined }[] | []
 }
 
 type KeyNumberProviderProps = {
@@ -46,11 +50,13 @@ type KeyNumberProviderProps = {
     lifeAdtitudeNumber: number;
     vowelNumber: number;
     nameNumber: number;
+    peakNumbers: number[];
+    challengeNumbers: number[]
 }
 
 const KeyNumberContext = createContext<KeyNumberContextType | undefined>(undefined);
 
-export function KeyNumberProvider({ children, keyNumber, birthdayNumber, lifeAdtitudeNumber, vowelNumber, nameNumber }: KeyNumberProviderProps) {
+export function KeyNumberProvider({ children, keyNumber, birthdayNumber, lifeAdtitudeNumber, vowelNumber, nameNumber, peakNumbers, challengeNumbers }: KeyNumberProviderProps) {
     const locales = 'vi';
 
     const lifePathNumberInfor = getLifePathNumber(locales, keyNumber);
@@ -60,14 +66,18 @@ export function KeyNumberProvider({ children, keyNumber, birthdayNumber, lifeAdt
         destiny: getNameMeanings(locales, nameNumber),
         vowel: getNameMeanings(locales, vowelNumber),
         additude: getAdditudeMeaning(locales, lifeAdtitudeNumber),
-        character: getCharacterMeanings(locales, nameNumber)
+        character: getCharacterMeanings(locales, nameNumber),
     }
+    const peakMeanings = getPeaksByPeakNumbers(locales, peakNumbers);
+    const challengeMeanings = getChallengesByChallengeNumbers(locales, challengeNumbers);
 
     const data = {
         general: lifePathNumberInfor?.general || null,
         birthday: birthdayNumberInfor || null,
         additude: additudeNumberInfor || null,
-        name: nameNumberInfor || null
+        name: nameNumberInfor || null,
+        peakMeanings: peakMeanings,
+        challengeMeanings: challengeMeanings,
     }
     return (
         <KeyNumberContext.Provider value={data}>

@@ -11,8 +11,8 @@ export function BirthdayChartArrow(props: BirthdayChartArrowProps) {
     return (
         <div id="birthday-arrow">
             {props.meaningByChart && 
-                <div className="mt-6">
-                    <h2 className="my-4 text-yellow-600 text-center text-xl font-bold uppercase">
+                <div className="mt-12">
+                    <h2 className="my-4 text-yellow-400 text-center text-2xl font-bold uppercase">
                         {t('This is an explanation for your arrow of birth chart')}
                     </h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -21,7 +21,7 @@ export function BirthdayChartArrow(props: BirthdayChartArrowProps) {
                                 <BlockDetail
                                     className={index === 8 ? 'lg:col-span-2' : ''}
                                     type={mean?.title}
-                                    style="text-blue-500"
+                                    style={mean?.title?.includes('-') ? "text-blue-500" : "text-yellow-400"}
                                     title={mean?.title}
                                     description={mean?.description}
                                 />

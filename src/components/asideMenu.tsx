@@ -1,4 +1,4 @@
-import { ChartNoAxesColumn, Crown, FingerprintPattern, Move3D, Star } from "lucide-react"
+import { ChartNoAxesColumn, Crown, FingerprintPattern, Move3D, Star, Flag } from "lucide-react"
 
 import {
   Sidebar,
@@ -42,7 +42,7 @@ const items = [
   {
     title: "Peaks and challenges",
     url: "#peaks-and-challenges",
-    icon: Star,
+    icon: Flag,
   },
 ]
 

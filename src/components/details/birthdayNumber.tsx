@@ -12,7 +12,7 @@ export function BirthdayNumber() {
             <div className="l">
                 <div className="text-center my-4">
                     <h2 className="text-2xl font-bold uppercase">{t("birthday number")}</h2>
-                    <div className="mt-2 text-6xl font-extrabold text-yellow-600">{birthdayNumber}</div>
+                    <div className="mt-2 text-6xl font-extrabold text-yellow-400">{birthdayNumber}</div>
                     <div className="mt-4 border-b border-dashed border-yellow-400 w-24 mx-auto"></div>
                 </div>
                 <BlockDetail
@@ -24,7 +24,7 @@ export function BirthdayNumber() {
             <div className="">
                 <div className="text-center my-4">
                     <h2 className="text-2xl font-bold uppercase">{t("life additude")}</h2>
-                    <div className="mt-2 text-6xl font-extrabold text-yellow-600">{lifeAdtitudeNumber}</div>
+                    <div className="mt-2 text-6xl font-extrabold text-yellow-400">{lifeAdtitudeNumber}</div>
                     <div className="mt-4 border-b border-dashed border-yellow-400 w-24 mx-auto"></div>
                 </div>
                 <BlockDetail

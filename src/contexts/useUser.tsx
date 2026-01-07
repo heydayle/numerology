@@ -32,6 +32,8 @@ interface UserContextType {
     vowelNumber: number;
     numberOfName: number;
     peaks: Record<string, any>[]
+    peakNumbers: number[]
+    challengeNumbers: number[]
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -213,7 +215,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
                age: firstPeak.age + 9,
                year: firstPeak.year + 9,
                peak: triagle[2][3],
-               challenge: triagle[3][3]
+               challenge: triagle[4][3]
             },
             {
                age: firstPeak.age + (9*2),
@@ -229,6 +231,18 @@ export function UserProvider({ children }: { children: ReactNode }) {
             },
         ]
     }, [mainNumber, user])
+
+    const peakNumbers = useMemo(() => {
+        const mappingGetPeaks = peaks.map((item) => item.peak)
+        const uniqueNumbers = [...new Set(mappingGetPeaks)];
+        return uniqueNumbers
+    }, [peaks])
+
+    const challengeNumbers = useMemo(() => {
+        const mappingGetChallenge = peaks.map((item) => item.challenge)
+        const uniqueNumbers = [...new Set(mappingGetChallenge)];
+        return uniqueNumbers
+    }, [peaks])
 
     const onChangeName = (name: string) => {
         setUser((prev) => ({
@@ -266,7 +280,9 @@ export function UserProvider({ children }: { children: ReactNode }) {
         lifeAdtitudeNumber,
         vowelNumber,
         numberOfName,
-        peaks
+        peaks,
+        peakNumbers,
+        challengeNumbers,
     }
 
     return (

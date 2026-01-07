@@ -98,8 +98,8 @@ export function BirthdayChart() {
 
     return (
         <div id="birthday-chart" className="flex flex-col">
-            {<div className="mt-4 text-center">
-                <h2 className="text-lg font-bold mb-6 uppercase">{t('birthday chart')}</h2>
+            {<div className="mt-6 text-center">
+                <h2 className="text-2xl font-bold mb-6 uppercase">{t('birthday chart')}</h2>
                 <div className="relative max-w-xs mx-auto">
                   <div className="grid grid-cols-3 gap-4 max-w-xs mx-auto text-center">
                       {renderItem(loShuGrid[0][0])}

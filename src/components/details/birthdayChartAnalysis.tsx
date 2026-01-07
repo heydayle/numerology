@@ -33,8 +33,11 @@ export function BirthdayChartAnalysis(props: BirthdayChartAnalysisProps) {
         for (const [key, value] of Object.entries(meaningByChart)) {
             const countNumber = Number(value.value) < 0 ? 0 : value.value.split('').length
             const title = countNumber < 1
-                ? t('not have number in birthday chart', { number: key })
-                : t('have number in birthday chart', { count: countNumber, number: key })
+                ? t('not have number in birthday chart', { number: `<span className="font-extra text-white">[${key}]</span>` })
+                : `<span className="text-yellow-400">${t('have number in birthday chart', {
+                        count: countNumber,
+                        number: `<span className="font-extra text-white">[${key}]</span>`
+                    })}</span>`
             convertToArray.push({ key, description: value.description, title })
         }
         return convertToArray
@@ -43,8 +46,8 @@ export function BirthdayChartAnalysis(props: BirthdayChartAnalysisProps) {
     return (
         <div>
             {renderMeanings() && 
-                <div className="mt-6">
-                    <h2 className="my-4 text-yellow-600 text-center text-xl font-bold uppercase">
+                <div className="mt-12">
+                    <h2 className="my-4 text-yellow-400 text-center text-2xl font-bold uppercase">
                         {t('This is an explanation for your birth chart')}
                     </h2>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -52,6 +55,7 @@ export function BirthdayChartAnalysis(props: BirthdayChartAnalysisProps) {
                             return (
                                 <BlockDetail
                                     className={index === 8 ? 'lg:col-span-2' : ''}
+                                    highlight={true}
                                     type={mean.key}
                                     style="text-blue-500"
                                     title={mean.title}

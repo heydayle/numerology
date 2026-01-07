@@ -7,6 +7,8 @@
     "Age": "Tuổi",
     "Peak": "Đỉnh cao",
     "Challenge": "Thử thách",
+    "Peak with number": "Đỉnh cao mang số",
+    "Challenge with number": "Thử thách mang số",
 
     "life path number": "Con số đường đời",
     "life path number subtitle": "Con số Đường Đời là con số được xem là quan trọng nhất trong các con số cốt lõi. Nó cho thấy đường nét chính về cuộc đời tương lai của bạn, về con đường bạn sẽ đi trong suốt cuộc đời và những yếu tố hình thành nên con đường đó. Con số này tiết lộ những bài học mà bạn sẽ học được, những thách thức bạn phải đối mặt và những cơ hội bạn sẽ nhận được dưới hình thức một bản phác thảo bao quát. Tin vào con số này hay không là quyền của bạn, nhưng trong phạm vi thần số học, người ta cho rằng đi theo con số Đường Đời là lựa chọn viên mãn nhất.\nBất cứ đặc điểm tích cực nào liên quan đến con số này đều biểu thị những kỹ năng và năng lực đặc biệt có thể hỗ trợ bạn trong mọi phương diện của cuộc sống. Các đặc điểm tiêu cực liên quan đến từng con số cho thấy những khiếm khuyết của bạn. Nói đúng hơn, nó chỉ ra các lĩnh vực trong đời sống nội tâm và các hoạt động bên ngoài mà bạn cần phải chú ý để tìm sự cân bằng.",
@@ -19,7 +21,7 @@
     "your soul number":"Con số vận mệnh {{numberOfName}} điều mà tâm hồn bạn cần để bằng lòng:",
     "your deepest purpose in life": "Mục đích sâu sắc nhất trong cuộc đời của bạn. Con người bạn mong muốn trở thành và những điều bạn khao khát có được và đạt được. Những mối quan hệ mà bạn đang nuôi dưỡng hoặc tránh né.\nCái tôi chính bạn được tiết lộ qua ý nghĩa con số Linh Hồn của bạn.\nVới con số \"{{vowelNumber}}\", bạn đang sống thể hiện và khao khát:",
     "the personality you interact": "Tính Cách mà bạn tương tác với thế giới bên ngoài, cá tính chủ yếu của bạn thể  hiện và mọi người đánh giá được thể  hiện qua ý nghĩa con số  Nhân cách của bạn. Với con số \"{{lifeAdtitudeNumber}}\"",
-    "peak and challenge": "Đỉnh cao và thử thách đời người",
+    "peak and challenge": "4 Đỉnh cao và thử thách đời người",
 
     "destiny_title": "Vận Mệnh",
     "overview_title": "Tổng Quan",

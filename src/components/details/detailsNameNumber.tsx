@@ -51,7 +51,7 @@ export function DetailsNameNumber() {
                     <BlockDetail
                         key="name-destiny"
                         type="name-destiny"
-                        style={'text-yellow-400'}
+                        style={'text-yellow-400 text-lg'}
                         title={t('your soul number', { numberOfName: numberOfName})}
                         description={name.destiny}
                         isLoading={isLoading}
@@ -61,7 +61,7 @@ export function DetailsNameNumber() {
                         <BlockDetail
                             key="name-vowel"
                             type="name-vowel"
-                            style={'text-yellow-400'}
+                            style={'text-yellow-400 text-lg'}
                             title={t('your deepest purpose in life', { vowelNumber })}
                             description={name.vowel}
                             isLoading={isLoading}
@@ -71,7 +71,7 @@ export function DetailsNameNumber() {
                         <BlockDetail
                             key="name-additude"
                             type="name-additude"
-                            style={'text-yellow-400'}
+                            style={'text-yellow-400 text-lg'}
                             title={t('the personality you interact', { lifeAdtitudeNumber })}
                             description={name.additude}
                             isLoading={isLoading}

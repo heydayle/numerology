@@ -39,7 +39,7 @@ export function DetailsNumber() {
                     </Tooltip>
                 </div>
                 
-                <div className="mt-2 text-8xl font-extrabold text-yellow-600">
+                <div className="mt-2 text-8xl font-extrabold text-yellow-400">
                     <CountUp from={100} to={mainNumber} direction="up"/>
                 </div>
                 <div className="mt-4 border-b border-dashed border-yellow-400 w-24 mx-auto"></div>
