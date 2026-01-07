@@ -9,7 +9,7 @@ import { Label } from '../ui/label';
 import { useTranslation } from 'react-i18next';
 import { Calendar1 } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '../ui/popover';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type KeyboardEvent } from 'react';
 import { useSteps } from '@/contexts/useSteps';
 
 export function UserForm() {
