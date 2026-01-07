@@ -59,7 +59,7 @@ export function Peaks() {
                                     <hr />
                                     <div>{t('Age')}: <b>{item.age}</b></div>
                                     <a href={`#peak-${item.peak}`} className="flex items-center gap-2"><Star size={16} className="fill-yellow-500 text-yellow-500"/>{t('Peak')}: <b className="text-yellow-400">[{item.peak}]</b></a>
-                                    <a href={`#peak-${item.challenge}`} className="flex items-center gap-2"><MountainSnow size={16} className="fill-blue-500 text-blue-500"/>{t('Challenge')}: <b className="text-blue-400">[{item.challenge}]</b></a>
+                                    <a href={`#challenge-${item.challenge}`} className="flex items-center gap-2"><MountainSnow size={16} className="fill-blue-500 text-blue-500"/>{t('Challenge')}: <b className="text-blue-400">[{item.challenge}]</b></a>
                                 </div>
                     })
                 }
