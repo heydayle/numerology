@@ -137,13 +137,13 @@
   @apply bottom-[50px] left-2
 }
 .startColumns {
-  @apply top-[150px] left-[-90px] rotate-90
+  @apply top-[145px] left-[-90px] rotate-90
 }
 .centerColumns {
-  @apply top-[150px] left-2 rotate-90
+  @apply top-[145px] left-2 rotate-90
 }
 .endColumn {
-  @apply top-[150px] left-[105px] rotate-90
+  @apply top-[145px] left-[105px] rotate-90
 }
 .startDiagonals {
   @apply top-[150px] -left-11 -rotate-45 w-[130%]
@@ -154,17 +154,17 @@
 
 .animated-line {
   animation-name: opacityAniamtion;
-  animation-duration: 4s; 
+  animation-duration: 2s; 
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
 
 @keyframes opacityAniamtion {
   0% {
-    opacity: 0%;
+    opacity: 10%;
     border-style: dotted;
   }
-  50% {
+  30% {
     border-style: dashed;
   }
   100% {
