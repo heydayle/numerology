@@ -21,7 +21,7 @@ export function CycleNineYears() {
                                     type={item.year.toString()}
                                     title={`<div className="px-2 text-lg">${item.year} - ${t('cycle nine years', {
                                         cycle: item.cycle,
-                                        from: item.from + item.year,
+                                        from: item.from + (item.year - 1),
                                         to: item.to + item.year
                                     })}</div>`}
                                     description={item.description}
