@@ -60,7 +60,7 @@ type KeyNumberProviderProps = {
 const KeyNumberContext = createContext<KeyNumberContextType | undefined>(undefined);
 
 export function KeyNumberProvider({ children, keyNumber, birthdayNumber, lifeAdtitudeNumber, vowelNumber, nameNumber, peakNumbers, challengeNumbers, cycleNumber }: KeyNumberProviderProps) {
-    const locales = 'vi';
+    const locales = localStorage.getItem('i18nextLng') || 'vi';
 
     const lifePathNumberInfor = getLifePathNumber(locales, keyNumber);
     const birthdayNumberInfor = getBirthdayMeaning(locales, birthdayNumber);

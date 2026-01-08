@@ -24,6 +24,9 @@ export function getCycleDateAndMeanings(locale: string, cycleNumber: number): {
     const localeCycleDate = getCycleDate(locale)
     const localeCycleMeanings = getCycleMeanings(locale)
 
+    if (!localeCycleDate || !localeCycleMeanings)
+        return []
+
     const currentYear = new Date().getFullYear()
     const threeYears = [currentYear - 1, currentYear, currentYear + 1]
     const threeValues = [cycleNumber - 1, cycleNumber >= 10 ? 1 : cycleNumber, (cycleNumber + 1) >= 10 ? 1 : (cycleNumber + 1)]

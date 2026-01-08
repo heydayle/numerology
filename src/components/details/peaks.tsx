@@ -7,8 +7,9 @@ import { Star, MountainSnow, Flag } from "lucide-react"
 export function Peaks() {
     const romanNumber = ['I', 'II', 'III', 'IV']
     const { t } = useTranslation();
-    const { peaks, setIsLoading } = useUser();
+    const { peaks, triagle, setIsLoading } = useUser();
     const { peakMeanings, challengeMeanings } = useKeyNumber();
+    const mapRowTriagle = [0,1,2,3,4]
 
     let timeoutId: ReturnType<typeof setTimeout>;
     const createTimeout = () => {
@@ -51,6 +52,58 @@ export function Peaks() {
             <div className="text-lg italic">
                 {t('peaks subtitle')}
             </div>
+            {triagle && <div className="my-4 mx-auto text-center flex flex-col items-center">
+                <div className="flex">
+                    {mapRowTriagle.map(item => {
+                        if (item !== 2)
+                            return <div className="w-10 h-6"></div>
+                        return <div className="w-10 h-6 border border-white flex items-center justify-center bg-yellow-400 text-yellow-900 font-bold">[{triagle[0][item]}]</div>
+                    })}
+                </div>
+                <div className="flex">
+                    {mapRowTriagle.map(item => {
+                        if (item !== 2)
+                            return <div className="w-10 h-6"></div>
+                        return <div className="w-10 h-6 border border-white flex items-center justify-center bg-yellow-400 text-yellow-900 font-bold">[{triagle[1][item]}]</div>
+                    })}
+                </div>
+                <div className="flex">
+                    {mapRowTriagle.map(item => {
+                        if (item !== 1 && item !== 3)
+                            return <div className="w-10 h-6"></div>
+                        return <div className="w-10 h-6 border border-white flex items-center justify-center bg-yellow-400 text-yellow-900 font-bold">[{triagle[2][item]}]</div>
+                    })}
+                </div>
+                <div className="flex">
+                    {mapRowTriagle.map(item => {
+                        if (item !== 0 && item !== 2 && item !== 4)
+                            return <div className="w-10 h-6"></div>
+                        return <div className="w-10 h-6 border border-white flex items-center justify-center font-bold">{triagle[3][item]}</div>
+                    })}
+                </div>
+                <div className="flex">
+                    {mapRowTriagle.map(item => {
+                        if (item !== 1 && item !== 3)
+                            return <div className="w-10 h-6"></div>
+                        return <div className="w-10 h-6 border border-white flex items-center justify-center bg-blue-400 text-blue-900 font-bold">[{triagle[4][item]}]</div>
+                    })}
+                </div>
+                <div className="flex">
+                    {mapRowTriagle.map(item => {
+                        if (item !== 2)
+                            return <div className="w-10 h-6"></div>
+                        return <div className="w-10 h-6 border border-white flex items-center justify-center bg-blue-400 text-blue-900 font-bold">[{triagle[5][item]}]</div>
+                    })}
+                </div>
+                <div className="flex">
+                    {mapRowTriagle.map(item => {
+                        if (item !== 2)
+                            return <div className="w-10 h-6"></div>
+                        return <div className="w-10 h-6 border border-white flex items-center justify-center bg-blue-400 text-blue-900 font-bold">[{triagle[6][item]}]</div>
+                    })}
+                </div>
+            </div>}
+            <hr className="my-6"/>
             <div className="mt-4 grid grid-cols-1 lg:grid-cols-4 gap-4">
                 {
                      peaks.map((item, index) => { 

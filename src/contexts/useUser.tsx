@@ -35,6 +35,7 @@ interface UserContextType {
     peakNumbers: number[];
     challengeNumbers: number[];
     cycleNumber: number;
+    triagle: number[][]
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -173,7 +174,6 @@ export function UserProvider({ children }: { children: ReactNode }) {
         const yearPeak = finalSum(sumYears, 9)
         const monthAndDayPeakFloor1 = monthPeak+dayPeak
         const dayAndYearPeakFloor1 = dayPeak+yearPeak
-        console.log('year: ', sumYears, yearPeak);
         
         const peak1 = monthAndDayPeakFloor1 > 9 ? monthAndDayPeakFloor1.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0) : monthAndDayPeakFloor1
         const peak2 = dayAndYearPeakFloor1 > 9 ? dayAndYearPeakFloor1.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0) : dayAndYearPeakFloor1
@@ -200,9 +200,6 @@ export function UserProvider({ children }: { children: ReactNode }) {
 
     const peaks = useMemo(() => {
         if (!date) return [];
-
-        console.log(triagle);
-        
 
         const firstPeak = {
             age: 36 - mainNumber,
@@ -315,6 +312,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
         peakNumbers,
         challengeNumbers,
         cycleNumber,
+        triagle,
     }
 
     return (

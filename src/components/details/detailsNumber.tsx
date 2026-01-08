@@ -50,7 +50,7 @@ export function DetailsNumber() {
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 {typeLifePathNumbersStrings.map((type) => {
-                    const info = (general as any)[type] as GeneralItemType;
+                    const info = (general as any)?.[type] as GeneralItemType;
                     return info?.description ? (
                         <BlockDetail
                             key={type}

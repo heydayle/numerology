@@ -20,7 +20,7 @@ const items = [
     icon: Crown,
   },
   {
-    title: "Birthday and Additude",
+    title: "Birthday and Attitude",
     url: "#birthday-number",
     icon: FingerprintPattern,
   },
