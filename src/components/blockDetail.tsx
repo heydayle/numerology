@@ -22,21 +22,21 @@ export function BlockDetail({ type, style, title, description, isLoading, classN
     return (
         <div key={type} className={classNameBind}>
             {title && (<><h3 className={`text-2xl font-semibold mb-4 whitespace-pre-line ${style}`}>
-                        { highlight ? renderWithHighlight() : title }
-                      </h3>
-                    <hr className="mb-4"/></>)}
+                {highlight ? renderWithHighlight() : title}
+            </h3>
+                <hr className="mb-4" /></>)}
             <div className="text-xl text-neutral-300">
-                {isLoading 
-                ? (
-                    <div className="flex flex-col gap-3">
-                        <Skeleton className="h-2.5 w-full rounded-full" />
-                        <Skeleton className="h-2.5 w-full rounded-full" />
-                        <Skeleton className="h-2.5 w-full rounded-full" />
-                        <Skeleton className="h-2.5 w-1/2 rounded-full" />
-                        <Skeleton className="h-2.5 w-1/3 rounded-full" />
-                    </div>
-                )
-                :  <p className="whitespace-pre-line">{description}</p>
+                {isLoading
+                    ? (
+                        <div className="flex flex-col gap-3">
+                            <Skeleton className="h-2.5 w-full rounded-full" />
+                            <Skeleton className="h-2.5 w-full rounded-full" />
+                            <Skeleton className="h-2.5 w-full rounded-full" />
+                            <Skeleton className="h-2.5 w-1/2 rounded-full" />
+                            <Skeleton className="h-2.5 w-1/3 rounded-full" />
+                        </div>
+                    )
+                    : <p className="whitespace-pre-line">{description}</p>
                 }
             </div>
         </div>
