@@ -13,7 +13,7 @@ export function Home() {
     return (
         <div className='p-6 pt-0 max-w-300 mx-auto relative font-mono'>
             <div className="sticky top-0 z-10 flex justify-between p-4 bg-black/20 filter backdrop-blur-sm">
-                <h1 className='text-center text-2xl font-bold'>{t("numberology")}</h1>
+                <h1 className='text-left text-2xl font-bold'>{t("numberology")} <p className="text-xs italic ">Nội dung tham khảo từ <b className="text-yellow-300">David A. Phillips</b> trong quyển "<b className="text-yellow-300">The Complete Book of Numerology: Discovering the Inner Self</b>"</p></h1>
                 {step === STEPS.Result && 
                     <div className="flex items-center gap-4">
                         <Button className="rounded-full" title="Renew information" onClick={() => renew()}><RotateCcw /></Button>
@@ -21,7 +21,7 @@ export function Home() {
                         <SidebarTrigger size="sm" className="text-right z-90" />
                     </div>}
             </div>
-            <hr className='my-4' />
+            <hr className='mb-4' />
             {currentStep.component}
             {step === STEPS.InputForm && <div className='md:w-125 mx-auto text-center'>
                 <Button
